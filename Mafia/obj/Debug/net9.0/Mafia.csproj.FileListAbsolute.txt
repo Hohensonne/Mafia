@@ -1,0 +1,7 @@
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.csproj.AssemblyReference.cache
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.AssemblyInfoInputs.cache
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.AssemblyInfo.cs
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.csproj.CoreCompileInputs.cache
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.MvcApplicationPartsAssemblyInfo.cs
+D:\Программирование\Mafia\obj\Debug\net9.0\Mafia.MvcApplicationPartsAssemblyInfo.cache
