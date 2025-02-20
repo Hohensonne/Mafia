@@ -11,13 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c5c2ae0e-286b-44ea-9a83-514734235065")]
-[assembly: System.Reflection.AssemblyCompanyAttribute("Mafia")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b55087be277d0f35a63b2bebfc69c37d576718ae")]
-[assembly: System.Reflection.AssemblyProductAttribute("Mafia")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Mafia")]
+[assembly: System.Reflection.AssemblyProductAttribute("Models")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
