@@ -1783,6 +1783,16 @@
           }
         }
       },
+      "Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dtos.dll": {}
+        }
+      },
       "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -5089,6 +5099,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Dtos/1.0.0": {
+      "type": "project",
+      "path": "../Dtos/Dtos.csproj",
+      "msbuildProject": "../Dtos/Dtos.csproj"
+    },
     "Models/1.0.0": {
       "type": "project",
       "path": "../Models/Models.csproj",
@@ -5102,6 +5117,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Dtos >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 9.0.2",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
@@ -5145,6 +5161,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\Программирование\\Mafia\\Dtos\\Dtos.csproj": {
+              "projectPath": "D:\\Программирование\\Mafia\\Dtos\\Dtos.csproj"
+            },
             "D:\\Программирование\\Mafia\\Models\\Models.csproj": {
               "projectPath": "D:\\Программирование\\Mafia\\Models\\Models.csproj"
             },
