@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Mafia.Logic\Mafia.Logic.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entites\" />
-  </ItemGroup>
-
 </Project>

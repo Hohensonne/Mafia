@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Mafia.Logic\Mafia.Logic.csproj" />
     <ProjectReference Include="..\Mafia.Persistence\Mafia.Persistence.csproj" />
   </ItemGroup>
