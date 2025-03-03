@@ -1,0 +1,15 @@
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\bin\Debug\net9.0\Mafia.Infrastructre.deps.json
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\bin\Debug\net9.0\Mafia.Infrastructre.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\bin\Debug\net9.0\Mafia.Infrastructre.pdb
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.csproj.AssemblyReference.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.AssemblyInfoInputs.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.AssemblyInfo.cs
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.csproj.CoreCompileInputs.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.In.96948FBF.Up2Date
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\refint\Mafia.Infrastructre.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.pdb
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\obj\Debug\net9.0\ref\Mafia.Infrastructre.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\bin\Debug\net9.0\Mafia.Core.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Infrastructre\bin\Debug\net9.0\Mafia.Core.pdb

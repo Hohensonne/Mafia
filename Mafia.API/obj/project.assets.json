@@ -855,10 +855,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/8.0.1": {
+      "Microsoft.IdentityModel.JsonWebTokens/8.6.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.0.1"
+          "Microsoft.IdentityModel.Tokens": "8.6.0"
         },
         "compile": {
           "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -1214,11 +1214,11 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.IdentityModel.Tokens.Jwt/8.0.1": {
+      "System.IdentityModel.Tokens.Jwt/8.6.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
-          "Microsoft.IdentityModel.Tokens": "8.0.1"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.6.0",
+          "Microsoft.IdentityModel.Tokens": "8.6.0"
         },
         "compile": {
           "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -1314,24 +1314,54 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Mafia.Logic/1.0.0": {
+      "Mafia.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Mafia.Core": "1.0.0",
+          "Mafia.Infrastructre": "1.0.0",
+          "Mafia.Persistence": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mafia.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mafia.Application.dll": {}
+        }
+      },
+      "Mafia.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.2"
         },
         "compile": {
-          "bin/placeholder/Mafia.Logic.dll": {}
+          "bin/placeholder/Mafia.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mafia.Logic.dll": {}
+          "bin/placeholder/Mafia.Core.dll": {}
+        }
+      },
+      "Mafia.Infrastructre/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Mafia.Core": "1.0.0",
+          "Microsoft.IdentityModel.Tokens": "8.6.0",
+          "System.IdentityModel.Tokens.Jwt": "8.6.0"
+        },
+        "compile": {
+          "bin/placeholder/Mafia.Infrastructre.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mafia.Infrastructre.dll": {}
         }
       },
       "Mafia.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Mafia.Logic": "1.0.0",
+          "Mafia.Core": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.2",
           "Microsoft.AspNetCore.Identity.UI": "9.0.2",
           "Microsoft.EntityFrameworkCore": "9.0.2",
@@ -3346,13 +3376,14 @@
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.0.1": {
-      "sha512": "s6++gF9x0rQApQzOBbSyp4jUaAlwm+DroKfL8gdOHxs83k8SJfUXhuc46rDB3rNXBQ1MVRxqKUrqFhO/M0E97g==",
+    "Microsoft.IdentityModel.JsonWebTokens/8.6.0": {
+      "sha512": "g/CFN/OzAhJb9a94ep6/xv4b9fOUL8heFkKDwC/HNb17tUDOIPN5iVawisfZ0p1xjJlmVyYWIggnECqIfX8Rfw==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.0.1",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "lib/net462/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/net462/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/net472/Microsoft.IdentityModel.JsonWebTokens.dll",
@@ -3365,7 +3396,7 @@
         "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.8.6.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
@@ -3901,13 +3932,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/8.0.1": {
-      "sha512": "GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
+    "System.IdentityModel.Tokens.Jwt/8.6.0": {
+      "sha512": "PbhxMaAejQ5pVStTsMPzja0Q2FOeEIOQy8isxw2tTxduqIjWRJ+P78bWGpaXH67Tkeb+2t91YBj2stXEw6vyZQ==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/8.0.1",
+      "path": "system.identitymodel.tokens.jwt/8.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "lib/net462/System.IdentityModel.Tokens.Jwt.dll",
         "lib/net462/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net472/System.IdentityModel.Tokens.Jwt.dll",
@@ -3920,7 +3952,7 @@
         "lib/net9.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.8.6.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
@@ -4104,10 +4136,20 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Mafia.Logic/1.0.0": {
+    "Mafia.Application/1.0.0": {
       "type": "project",
-      "path": "../Mafia.Logic/Mafia.Logic.csproj",
-      "msbuildProject": "../Mafia.Logic/Mafia.Logic.csproj"
+      "path": "../Mafia.Application/Mafia.Application.csproj",
+      "msbuildProject": "../Mafia.Application/Mafia.Application.csproj"
+    },
+    "Mafia.Core/1.0.0": {
+      "type": "project",
+      "path": "../Mafia.Core/Mafia.Core.csproj",
+      "msbuildProject": "../Mafia.Core/Mafia.Core.csproj"
+    },
+    "Mafia.Infrastructre/1.0.0": {
+      "type": "project",
+      "path": "../Mafia.Infrastructre/Mafia.Infrastructre.csproj",
+      "msbuildProject": "../Mafia.Infrastructre/Mafia.Infrastructre.csproj"
     },
     "Mafia.Persistence/1.0.0": {
       "type": "project",
@@ -4117,7 +4159,8 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Mafia.Logic >= 1.0.0",
+      "Mafia.Application >= 1.0.0",
+      "Mafia.Core >= 1.0.0",
       "Mafia.Persistence >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.2",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
@@ -4135,11 +4178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Программирование\\Mafia\\Mafia.API\\Mafia.API.csproj",
+      "projectUniqueName": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.API\\Mafia.API.csproj",
       "projectName": "Mafia.API",
-      "projectPath": "D:\\Программирование\\Mafia\\Mafia.API\\Mafia.API.csproj",
+      "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.API\\Mafia.API.csproj",
       "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-      "outputPath": "D:\\Программирование\\Mafia\\Mafia.API\\obj\\",
+      "outputPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4160,11 +4203,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Программирование\\Mafia\\Mafia.Logic\\Mafia.Logic.csproj": {
-              "projectPath": "D:\\Программирование\\Mafia\\Mafia.Logic\\Mafia.Logic.csproj"
+            "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Application\\Mafia.Application.csproj": {
+              "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Application\\Mafia.Application.csproj"
             },
-            "D:\\Программирование\\Mafia\\Mafia.Persistence\\Mafia.Persistence.csproj": {
-              "projectPath": "D:\\Программирование\\Mafia\\Mafia.Persistence\\Mafia.Persistence.csproj"
+            "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj": {
+              "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj"
+            },
+            "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Persistence\\Mafia.Persistence.csproj": {
+              "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Persistence\\Mafia.Persistence.csproj"
             }
           }
         }

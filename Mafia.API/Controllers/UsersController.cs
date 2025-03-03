@@ -1,6 +1,9 @@
 ﻿using Mafia.API.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Mafia.Core.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Identity;
 
 namespace Mafia.API.Controllers
 {
@@ -12,17 +15,6 @@ namespace Mafia.API.Controllers
         {
             _usersService = usersService;
         }
-        // GET: UserController
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: UserController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
         // GET: UserController/Create
         public async Task<ActionResult> Create(RegistrationRequest request)
@@ -31,61 +23,44 @@ namespace Mafia.API.Controllers
             return Ok();
         }
 
-        // POST: UserController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+
+        [HttpPost("login")]
+        public async Task<ActionResult> Login([FromBody] LoginRequest request, HttpContext context)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var (JwtToken, RefreshToken) = await _usersService.Login(request.Email, request.Password);
+                return Ok(new LoginResponse { JwtToken = JwtToken, RefreshToken = RefreshToken });
             }
-            catch
+            catch (InvalidOperationException)
             {
-                return View();
+                return Unauthorized(new
+                {
+                    status = "error",
+                    message = "Неверный логин или пароль",
+                    details = "Пожалуйста, проверьте введенные данные или восстановите пароль."
+                });
             }
         }
 
-        // GET: UserController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+        //[HttpPost("refresh-token")]
+        //public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenModel model)
+        //{
+        //    var user = await _userManager.Users.SingleOrDefaultAsync(u => u.RefreshToken == model.RefreshToken);
 
-        // POST: UserController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //    if (user == null || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        //        return Unauthorized();
 
-        // GET: UserController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+        //    var roles = await _userManager.GetRolesAsync(user);
+        //    var jwtToken = _tokenService.GenerateJwtToken(user, roles.ToList());
+        //    var newRefreshToken = _tokenService.GenerateRefreshToken();
 
-        // POST: UserController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //    user.RefreshToken = newRefreshToken;
+        //    user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+        //    await _userManager.UpdateAsync(user);
+
+        //    return Ok(new { JwtToken = jwtToken, RefreshToken = newRefreshToken });
+        //}
+
     }
 }

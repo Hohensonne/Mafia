@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.API", "Mafia.API\Mafia.API.csproj", "{4223775C-8AD7-4460-9296-858DCEB48625}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Application", "Mafia.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Infrastructre", "Mafia.Infrastructre\Mafia.Infrastructre.csproj", "{0058BBE2-EF87-4618-9F1A-CCCCC6D8980F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Logic", "Mafia.Logic\Mafia.Logic.csproj", "{21720FCE-FFE6-4F8F-89E1-1ABD229B7591}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Core", "Mafia.Core\Mafia.Core.csproj", "{21720FCE-FFE6-4F8F-89E1-1ABD229B7591}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mafia.Persistence", "Mafia.Persistence\Mafia.Persistence.csproj", "{FDF07958-3D2D-4618-94D4-C205EF688C74}"
 EndProject

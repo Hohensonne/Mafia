@@ -1,0 +1,24 @@
+D:\Программирование\Mafia\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.deps.json
+D:\Программирование\Mafia\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.dll
+D:\Программирование\Mafia\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.pdb
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.csproj.AssemblyReference.cache
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.AssemblyInfoInputs.cache
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.AssemblyInfo.cs
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.csproj.CoreCompileInputs.cache
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.dll
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\refint\Mafia.Logic.dll
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.pdb
+D:\Программирование\Mafia\Mafia.Logic\obj\Debug\net9.0\ref\Mafia.Logic.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.deps.json
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\bin\Debug\net9.0\Mafia.Logic.pdb
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.csproj.AssemblyReference.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.AssemblyInfoInputs.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.AssemblyInfo.cs
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.csproj.CoreCompileInputs.cache
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\refint\Mafia.Logic.dll
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\Mafia.Logic.pdb
+D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Logic\obj\Debug\net9.0\ref\Mafia.Logic.dll

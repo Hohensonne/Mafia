@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "D50b2v2semfBGt9CgQjLw00tNULjgqW9+BzTDJglRJc=",
+  "Source": "Mafia.API",
+  "BasePath": "_content/Mafia.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

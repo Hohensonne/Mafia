@@ -22,7 +22,8 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Mafia.Logic\Mafia.Logic.csproj" />
+		<ProjectReference Include="..\Mafia.Application\Mafia.Application.csproj" />
+		<ProjectReference Include="..\Mafia.Core\Mafia.Core.csproj" />
 		<ProjectReference Include="..\Mafia.Persistence\Mafia.Persistence.csproj" />
 	</ItemGroup>
 

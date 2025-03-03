@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mafia.Logic\Mafia.Logic.csproj" />
+    <ProjectReference Include="..\Mafia.Core\Mafia.Core.csproj" />
   </ItemGroup>
 
 </Project>

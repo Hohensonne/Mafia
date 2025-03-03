@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Mafia.Logic.Models;
+using Mafia.Core.Models;
 using Microsoft.AspNetCore.Identity;
 
 

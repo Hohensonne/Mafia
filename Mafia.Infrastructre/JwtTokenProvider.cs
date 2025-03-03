@@ -2,18 +2,22 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-using Mafia.Logic.Models;
+using Mafia.Core.Models;
+using Mafia.Core.Interfaces;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 
 namespace Mafia.Infrastructre
 {
-    class JwtTokenProvider
+    public class JwtTokenProvider : IJwtTokenProvider
     {
         private readonly IConfiguration _configuration;
+        private readonly UserManager<User> _userManager;
 
-        public JwtTokenProvider(IConfiguration configuration)
+        public JwtTokenProvider(IConfiguration configuration, UserManager<User> userManager)
         {
             _configuration = configuration;
+            _userManager = userManager;
         }
 
         public string GenerateJwtToken(User user, IList<string> roles)
@@ -49,6 +53,7 @@ namespace Mafia.Infrastructre
             using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
             rng.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
+
         }
     }
 }
