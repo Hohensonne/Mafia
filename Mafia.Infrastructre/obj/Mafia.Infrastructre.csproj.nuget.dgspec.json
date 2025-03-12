@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj": {}
+    "D:\\Программирование\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj": {}
   },
   "projects": {
-    "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj": {
+    "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj",
+        "projectUniqueName": "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj",
         "projectName": "Mafia.Core",
-        "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj",
+        "projectPath": "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj",
         "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-        "outputPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\obj\\",
+        "outputPath": "D:\\Программирование\\Mafia\\Mafia.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -75,14 +79,14 @@
         }
       }
     },
-    "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj": {
+    "D:\\Программирование\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
+        "projectUniqueName": "D:\\Программирование\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
         "projectName": "Mafia.Infrastructre",
-        "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
+        "projectPath": "D:\\Программирование\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
         "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-        "outputPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Infrastructre\\obj\\",
+        "outputPath": "D:\\Программирование\\Mafia\\Mafia.Infrastructre\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -103,8 +107,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj": {
-                "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj"
+              "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj": {
+                "projectPath": "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj"
               }
             }
           }
@@ -125,13 +129,25 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[8.6.0, )"
+              "version": "[8.6.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[8.6.0, )"
+              "version": "[8.6.1, )"
             }
           },
           "imports": [
@@ -146,6 +162,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

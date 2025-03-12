@@ -17,3 +17,22 @@ D:\Программирование\Новая папка (6)\Mafia-main\Mafia.A
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Application\obj\Debug\net9.0\ref\Mafia.Application.dll
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Application\bin\Debug\net9.0\Mafia.Core.dll
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Application\bin\Debug\net9.0\Mafia.Core.pdb
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Application.deps.json
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Application.dll
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Application.pdb
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Core.dll
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Infrastructre.dll
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Persistence.dll
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Infrastructre.pdb
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Core.pdb
+D:\Программирование\Mafia\Mafia.Application\bin\Debug\net9.0\Mafia.Persistence.pdb
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.csproj.AssemblyReference.cache
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.AssemblyInfoInputs.cache
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.AssemblyInfo.cs
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.csproj.CoreCompileInputs.cache
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Ap.55BE0B9D.Up2Date
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.dll
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\refint\Mafia.Application.dll
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.pdb
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\ref\Mafia.Application.dll

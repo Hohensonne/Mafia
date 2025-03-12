@@ -6,5 +6,8 @@ namespace Mafia.Core.Interfaces
     {
         string GenerateJwtToken(User user, IList<string> roles);
         string GenerateRefreshToken();
+        Task SaveRefreshTokenAsync(User user);
+        Task<User?> GetRefreshTokenAsync(string refreshToken);
+        Task RemoveRefreshTokenAsync(User user);
     }
 }

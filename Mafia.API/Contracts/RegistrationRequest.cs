@@ -2,13 +2,6 @@
 
 namespace Mafia.API.Contracts
 {
-    public class RegistrationRequest
-    {
-        [Required]
-        public string UserName { get;}
-        [Required]
-        public string Email { get;}
-        [Required]
-        public string Password { get;}
-    }
+    public record RegistrationRequest ([Required] string UserName, [Required] string Email, [Required] string Password, IFormFile? ProfileImage);
+   
 }

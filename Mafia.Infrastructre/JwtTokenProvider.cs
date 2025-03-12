@@ -6,6 +6,7 @@ using Mafia.Core.Models;
 using Mafia.Core.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mafia.Infrastructre
 {
@@ -53,7 +54,31 @@ namespace Mafia.Infrastructre
             using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
             rng.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
+        }
 
+        public async Task SaveRefreshTokenAsync(User user)
+        {
+            await _userManager.Users
+                .Where(x => x.Id == user.Id)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(x => x.RefreshToken, user.RefreshToken)
+                    .SetProperty(x => x.RefreshTokenExpiryTime, user.RefreshTokenExpiryTime)
+                );
+        }
+
+        public async Task<User?> GetRefreshTokenAsync(string refreshToken)
+        {
+            return await _userManager.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+        }
+
+        public async Task RemoveRefreshTokenAsync(User user)
+        {
+            await _userManager.Users
+                .Where(x => x.Id == user.Id)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(x => x.RefreshToken, "")
+                    .SetProperty(x => x.RefreshTokenExpiryTime, DateTime.MinValue)
+                );
         }
     }
 }

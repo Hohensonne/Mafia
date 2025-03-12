@@ -2,11 +2,5 @@
 
 namespace Mafia.API.Contracts
 {
-    public class LoginRequest
-    {
-        [Required]
-        public string Email { get; }
-        [Required]
-        public string Password { get; }
-    }
+    public record LoginRequest([Required] string Email, [Required] string Password);
 }

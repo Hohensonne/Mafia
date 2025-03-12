@@ -22,8 +22,7 @@ namespace Mafia.Persistence.Repositories
 
         public async Task<User?> GetByEmail(string email)
         {
-            var user = await _userManager.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Email == email);
-            return user;
+            return await _userManager.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Email == email);
         }
 
         public async Task<IList<User>> GetAll()
@@ -31,25 +30,28 @@ namespace Mafia.Persistence.Repositories
             return await _userManager.Users.ToListAsync();
         }
 
-        public async Task Create(User user, string password)
+        public async Task<IdentityResult> Create(User user, string password)
         {
-            await _userManager.CreateAsync(user, password);
+            return await _userManager.CreateAsync(user, password);
         }
 
-        public async Task Upadate(string id, string userName, string email, string password)
+        public async Task<IdentityResult> Update(string id, string userName, string email, string password)
         {
             var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return IdentityResult.Failed();
             user.UserName = userName;
             user.Email = email;
             user.PasswordHash = new PasswordHasher<User>().HashPassword(user, password);
-            await _userManager.UpdateAsync(user);
+            return await _userManager.UpdateAsync(user);
         }
 
-        public async Task DeleteByEmail(string email)
+        public async Task<IdentityResult> DeleteByEmail(string email)
         {
             User? user = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == email);
             if (user != null)
-                await _userManager.DeleteAsync(user);
+                return await _userManager.DeleteAsync(user);
+            return IdentityResult.Failed();
         }
     }
 

@@ -15,3 +15,20 @@ D:\Программирование\Новая папка (6)\Mafia-main\Mafia.P
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Persistence\obj\Debug\net9.0\ref\Mafia.Persistence.dll
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Persistence\bin\Debug\net9.0\Mafia.Core.dll
 D:\Программирование\Новая папка (6)\Mafia-main\Mafia.Persistence\bin\Debug\net9.0\Mafia.Core.pdb
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Persistence.deps.json
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Persistence.runtimeconfig.json
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Persistence.dll
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Persistence.pdb
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Core.dll
+D:\Программирование\Mafia\Mafia.Persistence\bin\Debug\net9.0\Mafia.Core.pdb
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.csproj.AssemblyReference.cache
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.AssemblyInfoInputs.cache
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.AssemblyInfo.cs
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.csproj.CoreCompileInputs.cache
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Pe.F21DA2C8.Up2Date
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.dll
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\refint\Mafia.Persistence.dll
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.pdb
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.genruntimeconfig.cache
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\ref\Mafia.Persistence.dll

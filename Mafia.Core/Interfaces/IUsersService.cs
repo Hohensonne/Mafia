@@ -1,10 +1,15 @@
-﻿namespace Mafia.Core.Interfaces
+﻿using Mafia.Core.Models;
+using Microsoft.AspNetCore.Http;
+
+namespace Mafia.Core.Interfaces
 {
     public interface IUsersService
     {
+        Task<User> GetByEmail(string email);
         Task DeleteByEmail(string email);
-        Task<(string JwtToken, string RefreshToken)> Login(string email, string password);
-        Task Register(string userName, string email, string password);
+        Task<(string jwtToken, string refreshToken)> Login(string email, string password);
+        Task Register(string userName, string email, string password, IFormFile profileImage);
         Task Update(string id, string userName, string email, string password);
+        Task<(string jwtToken, string refreshToken)> RefreshTokenAsync(string refreshToken);
     }
 }

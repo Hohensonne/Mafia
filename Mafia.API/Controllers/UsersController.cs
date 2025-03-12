@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using Mafia.Core.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Identity;
-
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.VisualBasic;
 namespace Mafia.API.Controllers
 {
+    [Route("user")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersService _usersService;
@@ -16,51 +19,72 @@ namespace Mafia.API.Controllers
             _usersService = usersService;
         }
 
-        // GET: UserController/Create
-        public async Task<ActionResult> Create(RegistrationRequest request)
+
+        [Authorize]
+        [HttpGet("get")]
+        public async Task<IActionResult> Get()
         {
-            await _usersService.Register(request.UserName, request.Email, request.Password);
-            return Ok();
+            try
+            {
+                var email = User.FindFirst(ClaimTypes.Email)?.Value;
+                var user = await _usersService.GetByEmail(email);
+                return Ok(new GetUserResponse(user.Id, user.UserName, user.Email, user.ProfileImageUrl));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //[HttpGet("getall")]
+        //public async Task<ActionResult> GetAll()
+        //{
+        //    var users = await _usersService.GetAll();
+        //    return Ok(users);
+        //}   
+
+
+        [HttpPost("create")]
+        public async Task<IActionResult> Create(RegistrationRequest request)
+        {
+            try 
+            {
+                await _usersService.Register(request.UserName, request.Email, request.Password, request.ProfileImage);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
 
         [HttpPost("login")]
-        public async Task<ActionResult> Login([FromBody] LoginRequest request, HttpContext context)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             try
             {
-                var (JwtToken, RefreshToken) = await _usersService.Login(request.Email, request.Password);
-                return Ok(new LoginResponse { JwtToken = JwtToken, RefreshToken = RefreshToken });
+                var (jwtToken, refreshToken) = await _usersService.Login(request.Email, request.Password);
+                return Ok(new LoginResponse(jwtToken, refreshToken));
             }
-            catch (InvalidOperationException)
+            catch (Exception ex)
             {
-                return Unauthorized(new
-                {
-                    status = "error",
-                    message = "Неверный логин или пароль",
-                    details = "Пожалуйста, проверьте введенные данные или восстановите пароль."
-                });
+                return BadRequest(ex.Message);
             }
         }
 
-        //[HttpPost("refresh-token")]
-        //public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenModel model)
-        //{
-        //    var user = await _userManager.Users.SingleOrDefaultAsync(u => u.RefreshToken == model.RefreshToken);
-
-        //    if (user == null || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-        //        return Unauthorized();
-
-        //    var roles = await _userManager.GetRolesAsync(user);
-        //    var jwtToken = _tokenService.GenerateJwtToken(user, roles.ToList());
-        //    var newRefreshToken = _tokenService.GenerateRefreshToken();
-
-        //    user.RefreshToken = newRefreshToken;
-        //    user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-        //    await _userManager.UpdateAsync(user);
-
-        //    return Ok(new { JwtToken = jwtToken, RefreshToken = newRefreshToken });
-        //}
-
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        {
+            try
+            {
+                var (newJwtToken, newRefreshToken) = await _usersService.RefreshTokenAsync(refreshToken);
+                return Ok(new LoginResponse(newJwtToken, newRefreshToken));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

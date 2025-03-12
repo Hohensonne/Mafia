@@ -9,22 +9,25 @@ using Mafia.Application.Servises;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Mafia.Persistence.Repositories;
 using Mafia.Infrastructre;
-
+using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IJwtTokenProvider, JwtTokenProvider>();
+builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
 builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddTransient<IUsersRepository, UsersRepository>();
+builder.Services.AddTransient<IFileRepository, FileRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")); //  Постройка связи моделей с базой данных DefaultConnection
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 
@@ -34,7 +37,10 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.User.RequireUniqueEmail = true;
+});
 
 
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -61,7 +67,7 @@ builder.Services.AddAuthentication(options =>
 //{
 //    OnMessageReceived = context =>
 //    {
-//        // Проверяем, есть ли токен в куках
+//        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
 //        if (context.Request.Cookies.ContainsKey("cooookies"))
 //        {
 //            context.Token = context.Request.Cookies["cooookies"];
@@ -77,17 +83,55 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mafia API v1");
+        c.RoutePrefix = string.Empty; // Р§С‚РѕР±С‹ Swagger UI Р±С‹Р» РґРѕСЃС‚СѓРїРµРЅ РїРѕ РєРѕСЂРЅРµРІРѕРјСѓ URL
+    });
 }
 
 
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Р”РѕР±Р°РІР»СЏРµРј РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ СЂРѕР»РµР№
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    
+    
+        // РџСЂРёРјРµРЅСЏРµРј РјРёРіСЂР°С†РёРё
+        var context = services.GetRequiredService<ApplicationDbContext>();
+        context.Database.Migrate();
+        
+        // РЎРѕР·РґР°РµРј Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°, РµСЃР»Рё РµРіРѕ РЅРµС‚
+        var userManager = services.GetRequiredService<UserManager<User>>();
+        var adminEmail = "admin@example.com";
+        
+        var adminUser = await userManager.FindByEmailAsync(adminEmail);
+        if (adminUser == null)
+        {
+            adminUser = new User
+            {
+                UserName = adminEmail,
+                Email = adminEmail,
+                EmailConfirmed = true
+            };
+            
+            var result = await userManager.CreateAsync(adminUser, "Admin123!");
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(adminUser, "Admin");
+            }
+        }
+    
+    
+}
 
 app.Run();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj": {}
+    "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj": {}
   },
   "projects": {
-    "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj": {
+    "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj",
+        "projectUniqueName": "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj",
         "projectName": "Mafia.Core",
-        "projectPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\Mafia.Core.csproj",
+        "projectPath": "D:\\Программирование\\Mafia\\Mafia.Core\\Mafia.Core.csproj",
         "packagesPath": "C:\\Users\\danii\\.nuget\\packages\\",
-        "outputPath": "D:\\Программирование\\Новая папка (6)\\Mafia-main\\Mafia.Core\\obj\\",
+        "outputPath": "D:\\Программирование\\Mafia\\Mafia.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"

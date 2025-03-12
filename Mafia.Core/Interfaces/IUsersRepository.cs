@@ -1,13 +1,14 @@
 ﻿using Mafia.Core.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Mafia.Core.Interfaces
 {
     public interface IUsersRepository
     {
-        Task Create(User user, string password);
-        Task DeleteByEmail(string email);
+        Task<IdentityResult> Create(User user, string password);
+        Task<IdentityResult> DeleteByEmail(string email);
         Task<IList<User>> GetAll();
         Task<User?> GetByEmail(string email);
-        Task Upadate(string id, string userName, string email, string password);
+        Task<IdentityResult> Update(string id, string userName, string email, string password);
     }
 }
