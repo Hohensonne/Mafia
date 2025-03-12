@@ -28,3 +28,4 @@ D:\Программирование\Mafia\Mafia.Infrastructre\obj\Debug\net9.0\M
 D:\Программирование\Mafia\Mafia.Infrastructre\obj\Debug\net9.0\refint\Mafia.Infrastructre.dll
 D:\Программирование\Mafia\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.pdb
 D:\Программирование\Mafia\Mafia.Infrastructre\obj\Debug\net9.0\ref\Mafia.Infrastructre.dll
+D:\Программирование\Mafia\Mafia.Infrastructre\obj\Debug\net9.0\Mafia.Infrastructre.sourcelink.json

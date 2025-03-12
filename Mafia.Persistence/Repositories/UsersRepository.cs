@@ -53,7 +53,12 @@ namespace Mafia.Persistence.Repositories
                 return await _userManager.DeleteAsync(user);
             return IdentityResult.Failed();
         }
+        
+        public async Task<IdentityResult> UpdateProfileImage(string id, string profileImageUrl  )
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            user.ProfileImageUrl = profileImageUrl;
+            return await _userManager.UpdateAsync(user);
+        }
     }
-
-
 }

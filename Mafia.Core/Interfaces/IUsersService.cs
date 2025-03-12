@@ -10,6 +10,7 @@ namespace Mafia.Core.Interfaces
         Task<(string jwtToken, string refreshToken)> Login(string email, string password);
         Task Register(string userName, string email, string password, IFormFile profileImage);
         Task Update(string id, string userName, string email, string password);
+        Task UpdateProfileImage(string email, IFormFile profileImage);
         Task<(string jwtToken, string refreshToken)> RefreshTokenAsync(string refreshToken);
     }
 }

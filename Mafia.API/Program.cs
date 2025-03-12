@@ -5,33 +5,80 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Mafia.Persistence;
 using Mafia.Core.Interfaces;
-using Mafia.Application.Servises;
+using Mafia.Application.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Mafia.Persistence.Repositories;
 using Mafia.Infrastructre;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
 builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IPhotoService, PhotoService>();
+
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 builder.Services.AddTransient<IFileRepository, FileRepository>();
+builder.Services.AddTransient<ICartRepository, CartRepository>();
+builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<IGameRegistrationRepository, GameRegistrationRepository>();
+builder.Services.AddTransient<IPhotoRepository, PhotoRepository>();
+builder.Services.AddTransient<IGameRepository, GameRepository>();
+builder.Services.AddTransient<ILocationRepository, LocationRepository>();
+builder.Services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
+builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
 builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
-builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Mafia API",
+        Version = "v1",
+        Description = "API для приложения Mafia"
+    });
+    
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme."
+    });
+    
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
+
+builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
-
-
 
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -41,7 +88,6 @@ builder.Services.Configure<IdentityOptions>(options =>
 {
     options.User.RequireUniqueEmail = true;
 });
-
 
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = Encoding.ASCII.GetBytes(jwtSettings["Key"]);
@@ -67,7 +113,6 @@ builder.Services.AddAuthentication(options =>
 //{
 //    OnMessageReceived = context =>
 //    {
-//        // ���������, ���� �� ����� � �����
 //        if (context.Request.Cookies.ContainsKey("cooookies"))
 //        {
 //            context.Token = context.Request.Cookies["cooookies"];
@@ -80,7 +125,6 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -89,11 +133,14 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mafia API v1");
         c.RoutePrefix = string.Empty; // Чтобы Swagger UI был доступен по корневому URL
     });
+    
+    app.UseDeveloperExceptionPage();
 }
 
-
-
 app.UseHttpsRedirection();
+
+// Добавляем поддержку статических файлов
+app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();

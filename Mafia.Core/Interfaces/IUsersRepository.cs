@@ -10,5 +10,6 @@ namespace Mafia.Core.Interfaces
         Task<IList<User>> GetAll();
         Task<User?> GetByEmail(string email);
         Task<IdentityResult> Update(string id, string userName, string email, string password);
+        Task<IdentityResult> UpdateProfileImage(string id, string profileImageUrl);
     }
 }

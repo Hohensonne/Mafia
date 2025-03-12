@@ -36,3 +36,4 @@ D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Maf
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\refint\Mafia.Application.dll
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.pdb
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\ref\Mafia.Application.dll
+D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.sourcelink.json

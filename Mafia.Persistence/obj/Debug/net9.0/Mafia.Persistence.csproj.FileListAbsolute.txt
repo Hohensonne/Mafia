@@ -32,3 +32,4 @@ D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\ref
 D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.pdb
 D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.genruntimeconfig.cache
 D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\ref\Mafia.Persistence.dll
+D:\Программирование\Mafia\Mafia.Persistence\obj\Debug\net9.0\Mafia.Persistence.sourcelink.json

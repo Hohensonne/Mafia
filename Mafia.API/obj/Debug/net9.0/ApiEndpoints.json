@@ -71,5 +71,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Mafia.API.Controllers.UsersController",
+    "Method": "UpdateProfileImage",
+    "RelativePath": "user/updateProfileImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProfileImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

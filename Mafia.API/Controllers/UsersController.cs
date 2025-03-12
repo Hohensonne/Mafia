@@ -10,6 +10,8 @@ using Microsoft.VisualBasic;
 namespace Mafia.API.Controllers
 {
     [Route("user")]
+    [ApiController]
+    [Produces("application/json")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersService _usersService;
@@ -45,7 +47,7 @@ namespace Mafia.API.Controllers
 
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create(RegistrationRequest request)
+        public async Task<IActionResult> Create([FromForm] RegistrationRequest request)
         {
             try 
             {
@@ -72,6 +74,24 @@ namespace Mafia.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost("updateProfileImage")]
+        [Authorize]
+        public async Task<IActionResult> UpdateProfileImage([FromForm] UpdateProfileImageRequest request)
+        {
+            try
+            {
+                var email = User.FindFirst(ClaimTypes.Email)?.Value;
+                await _usersService.UpdateProfileImage(email, request.ProfileImage);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
+        
 
         [HttpPost("refresh-token")]
         public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)

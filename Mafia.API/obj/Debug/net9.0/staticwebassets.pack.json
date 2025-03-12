@@ -1,48 +1,20 @@
 {
   "Files": [
     {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\0ebeda67-001d-46c0-9e2d-16e7014c905d_07a3bd50-446d-437d-850f-4d81fef33c48.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\0ebeda67-001d-46c0-9e2d-16e7014c905d_07a3bd50-446d-437d-850f-4d81fef33c48.jpg"
+      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png",
+      "PackagePath": "staticwebassets\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png"
     },
     {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\17b31f43-0cb9-4d4b-b11a-07da2bebe195_7018b7d7-5b8b-4ffd-a9b7-f1f212b08de7.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\17b31f43-0cb9-4d4b-b11a-07da2bebe195_7018b7d7-5b8b-4ffd-a9b7-f1f212b08de7.jpg"
+      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png",
+      "PackagePath": "staticwebassets\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png"
     },
     {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\19c0d234-2513-4d67-8dd0-bce847646478_3cb26bd7-94bb-4a72-8db5-8c031bf8b524.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\19c0d234-2513-4d67-8dd0-bce847646478_3cb26bd7-94bb-4a72-8db5-8c031bf8b524.jpg"
+      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png",
+      "PackagePath": "staticwebassets\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png"
     },
     {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\1c29ae63-0ef4-4bd1-98f5-7d3c4743cdf7_7194a7cf-f128-44a2-88d9-48a187708f26.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\1c29ae63-0ef4-4bd1-98f5-7d3c4743cdf7_7194a7cf-f128-44a2-88d9-48a187708f26.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\2e462b1b-508d-4c69-ad04-16c20a0e4b59_150066bf-82ce-4697-af81-98a5b83e3a41.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\2e462b1b-508d-4c69-ad04-16c20a0e4b59_150066bf-82ce-4697-af81-98a5b83e3a41.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\45b8057d-609f-4e1b-abc5-dd21efced3b9_ddb2008a-40af-449e-8128-c1d4856cf93a.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\45b8057d-609f-4e1b-abc5-dd21efced3b9_ddb2008a-40af-449e-8128-c1d4856cf93a.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\49a68cd2-d10e-4ee4-985e-08e0bff294b0_441001a4-4a4e-4837-86c1-613916ef51b3.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\49a68cd2-d10e-4ee4-985e-08e0bff294b0_441001a4-4a4e-4837-86c1-613916ef51b3.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\6d7a4d8a-42e9-4900-b779-20878c647ea2_dc288019-29b8-4cbe-951c-a7c6fdfa64d4.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\6d7a4d8a-42e9-4900-b779-20878c647ea2_dc288019-29b8-4cbe-951c-a7c6fdfa64d4.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\ae17520a-9ab1-4041-b6c4-99c09a1e6c32_79f87852-775a-488a-a09f-2b94aeaf3564.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\ae17520a-9ab1-4041-b6c4-99c09a1e6c32_79f87852-775a-488a-a09f-2b94aeaf3564.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\db1de07f-ae7b-47bc-abe3-1932ff1969e4_4aefc359-9add-4454-934c-b9282ebe9a70.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\db1de07f-ae7b-47bc-abe3-1932ff1969e4_4aefc359-9add-4454-934c-b9282ebe9a70.jpg"
-    },
-    {
-      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\f5906968-70e1-4335-a3ea-ec23d4ff0191_0853523b-33f0-438f-9469-f86e5f35d716.jpg",
-      "PackagePath": "staticwebassets\\images\\profiles\\f5906968-70e1-4335-a3ea-ec23d4ff0191_0853523b-33f0-438f-9469-f86e5f35d716.jpg"
+      "Id": "D:\\Программирование\\Mafia\\Mafia.API\\wwwroot\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png",
+      "PackagePath": "staticwebassets\\images\\profiles\\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Mafia.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

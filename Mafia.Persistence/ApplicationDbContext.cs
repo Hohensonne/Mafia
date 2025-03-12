@@ -2,8 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Mafia.Core.Models;
 using Microsoft.AspNetCore.Identity;
-
-
+using Mafia.Persistence.Configurations;
 namespace Mafia.Persistence
 {
     public class ApplicationDbContext : IdentityDbContext<User, IdentityRole, string>
@@ -13,12 +12,26 @@ namespace Mafia.Persistence
         {
         }
 
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<GameRegistration> GameRegistrations { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Photo> Photos { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Location> Locations { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            
-            
-            
+            builder.ApplyConfiguration(new CartConfiguration());
+            builder.ApplyConfiguration(new GameConfiguration());
+            builder.ApplyConfiguration(new GameRegistrationConfiguration());
+            builder.ApplyConfiguration(new OrderConfiguration());
+            builder.ApplyConfiguration(new OrderDetailConfiguration());
+            builder.ApplyConfiguration(new PhotoConfiguration());
+            builder.ApplyConfiguration(new ProductConfiguration());
+            builder.ApplyConfiguration(new LocationConfiguration());
             SeedRoles(builder);
         }
         
