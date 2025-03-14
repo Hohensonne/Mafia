@@ -18,19 +18,19 @@ namespace Mafia.Persistence.Repositories
             return await _context.Locations.ToListAsync();
         }
 
-        public async Task<Location?> GetByIdAsync(Guid id)
+        public async Task<Location?> GetByIdAsync(string id)
         {
             return await _context.Locations.FindAsync(id);
         }
 
-        public async Task<Location?> GetByIdWithGamesAsync(Guid id)
+        public async Task<Location?> GetByIdWithGamesAsync(string id)
         {
             return await _context.Locations
                 .Include(l => l.Games)
                 .FirstOrDefaultAsync(l => l.Id == id);
         }
 
-        public async Task<Guid> CreateAsync(Location location)
+        public async Task<string> CreateAsync(Location location)
         {
             await _context.Locations.AddAsync(location);
             await _context.SaveChangesAsync();
@@ -43,7 +43,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var location = await _context.Locations.FindAsync(id);
             if (location != null)

@@ -25,12 +25,12 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Product?> GetByIdAsync(Guid id)
+        public async Task<Product?> GetByIdAsync(string id)
         {
             return await _context.Products.FindAsync(id);
         }
 
-        public async Task<Guid> CreateAsync(Product product)
+        public async Task<string> CreateAsync(Product product)
         {
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
@@ -43,7 +43,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var product = await _context.Products.FindAsync(id);
             if (product != null)
@@ -53,7 +53,7 @@ namespace Mafia.Persistence.Repositories
             }
         }
 
-        public async Task<bool> UpdateStockAsync(Guid id, int quantity)
+        public async Task<bool> UpdateStockAsync(string id, int quantity)
         {
             var product = await _context.Products.FindAsync(id);
             if (product == null)

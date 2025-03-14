@@ -20,7 +20,7 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Game>> GetAllByLocationIdAsync(Guid locationId)
+        public async Task<IEnumerable<Game>> GetAllByLocationIdAsync(string locationId)
         {
             return await _context.Games
                 .Where(g => g.LocationId == locationId)
@@ -37,14 +37,14 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Game?> GetByIdAsync(Guid id)
+        public async Task<Game?> GetByIdAsync(string id)
         {
             return await _context.Games
                 .Include(g => g.Location)
                 .FirstOrDefaultAsync(g => g.Id == id);
         }
 
-        public async Task<Game?> GetByIdWithRegistrationsAsync(Guid id)
+        public async Task<Game?> GetByIdWithRegistrationsAsync(string id)
         {
             return await _context.Games
                 .Include(g => g.Location)
@@ -53,7 +53,7 @@ namespace Mafia.Persistence.Repositories
                 .FirstOrDefaultAsync(g => g.Id == id);
         }
 
-        public async Task<Game?> GetByIdWithPhotosAsync(Guid id)
+        public async Task<Game?> GetByIdWithPhotosAsync(string id)
         {
             return await _context.Games
                 .Include(g => g.Location)
@@ -62,7 +62,7 @@ namespace Mafia.Persistence.Repositories
                 .FirstOrDefaultAsync(g => g.Id == id);
         }
 
-        public async Task<Guid> CreateAsync(Game game)
+        public async Task<string> CreateAsync(Game game)
         {
             await _context.Games.AddAsync(game);
             await _context.SaveChangesAsync();
@@ -75,7 +75,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var game = await _context.Games.FindAsync(id);
             if (game != null)
@@ -85,7 +85,7 @@ namespace Mafia.Persistence.Repositories
             }
         }
 
-        public async Task<bool> IncrementCurrentPlayersAsync(Guid id)
+        public async Task<bool> IncrementCurrentPlayersAsync(string id)
         {
             var game = await _context.Games.FindAsync(id);
             if (game == null || game.CurrentPlayers >= game.MaxPlayers)
@@ -98,7 +98,7 @@ namespace Mafia.Persistence.Repositories
             return true;
         }
 
-        public async Task<bool> DecrementCurrentPlayersAsync(Guid id)
+        public async Task<bool> DecrementCurrentPlayersAsync(string id)
         {
             var game = await _context.Games.FindAsync(id);
             if (game == null || game.CurrentPlayers <= 0)

@@ -1,5 +1,6 @@
 using Mafia.Core.Interfaces;
 using Mafia.Core.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Mafia.Application.Services
 {
@@ -24,7 +25,7 @@ namespace Mafia.Application.Services
             return await _gameRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Game>> GetGamesByLocationAsync(Guid locationId)
+        public async Task<IEnumerable<Game>> GetGamesByLocationAsync(string locationId)
         {
             return await _gameRepository.GetAllByLocationIdAsync(locationId);
         }
@@ -34,22 +35,22 @@ namespace Mafia.Application.Services
             return await _gameRepository.GetUpcomingGamesAsync();
         }
 
-        public async Task<Game?> GetGameByIdAsync(Guid id)
+        public async Task<Game?> GetGameByIdAsync(string id)
         {
             return await _gameRepository.GetByIdAsync(id);
         }
 
-        public async Task<Game?> GetGameWithRegistrationsAsync(Guid id)
+        public async Task<Game?> GetGameWithRegistrationsAsync(string id)
         {
             return await _gameRepository.GetByIdWithRegistrationsAsync(id);
         }
 
-        public async Task<Game?> GetGameWithPhotosAsync(Guid id)
+        public async Task<Game?> GetGameWithPhotosAsync(string id)
         {
             return await _gameRepository.GetByIdWithPhotosAsync(id);
         }
 
-        public async Task<Guid> CreateGameAsync(Game game)
+        public async Task<string> CreateGameAsync(Game game)
         {
             game.CreatedAt = DateTime.UtcNow;
             game.CurrentPlayers = 0;
@@ -61,12 +62,12 @@ namespace Mafia.Application.Services
             await _gameRepository.UpdateAsync(game);
         }
 
-        public async Task DeleteGameAsync(Guid id)
+        public async Task DeleteGameAsync(string id)
         {
             await _gameRepository.DeleteAsync(id);
         }
 
-        public async Task<bool> RegisterUserForGameAsync(Guid gameId, string userId)
+        public async Task<bool> RegisterUserForGameAsync(string gameId, string userId)
         {
             // Проверяем, существует ли игра
             var game = await _gameRepository.GetByIdAsync(gameId);
@@ -111,7 +112,7 @@ namespace Mafia.Application.Services
             return true;
         }
 
-        public async Task<bool> CancelRegistrationAsync(Guid gameId, string userId)
+        public async Task<bool> CancelRegistrationAsync(string gameId, string userId)
         {
             var registration = await _gameRegistrationRepository.GetByGameIdAndUserIdAsync(gameId, userId);
             if (registration == null)
@@ -127,7 +128,7 @@ namespace Mafia.Application.Services
             return true;
         }
 
-        public async Task<bool> ApproveRegistrationAsync(Guid registrationId)
+        public async Task<bool> ApproveRegistrationAsync(string registrationId)
         {
             var registration = await _gameRegistrationRepository.GetByIdAsync(registrationId);
             if (registration == null)
@@ -139,15 +140,21 @@ namespace Mafia.Application.Services
             return true;
         }
 
-        public async Task<bool> AddPhotoToGameAsync(Photo photo)
+        public async Task<bool> AddPhotoToGameAsync(string gameId, string userId, IFormFile file)
         {
-            var game = await _gameRepository.GetByIdAsync(photo.GameId);
+            var game = await _gameRepository.GetByIdAsync(gameId);
             if (game == null)
             {
                 return false;
             }
+    
+            var photo = new Photo
+            {
+                GameId = gameId,
+                UserId = userId,
+                UploadedAt = DateTime.UtcNow
+            };
 
-            photo.UploadedAt = DateTime.UtcNow;
             await _photoRepository.CreateAsync(photo);
             return true;
         }

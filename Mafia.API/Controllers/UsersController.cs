@@ -94,11 +94,11 @@ namespace Mafia.API.Controllers
         
 
         [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenRequest request)
         {
             try
             {
-                var (newJwtToken, newRefreshToken) = await _usersService.RefreshTokenAsync(refreshToken);
+                var (newJwtToken, newRefreshToken) = await _usersService.RefreshTokenAsync(request.RefreshTokenRequest);
                 return Ok(new LoginResponse(newJwtToken, newRefreshToken));
             }
             catch (Exception ex)

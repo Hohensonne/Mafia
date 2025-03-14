@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{21720FCE-FFE6-4F8F-89E1-1ABD229B7591}|Mafia.Core\\Mafia.Core.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.core\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21720FCE-FFE6-4F8F-89E1-1ABD229B7591}|Mafia.Core\\Mafia.Core.csproj|solutionrelative:mafia.core\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.application\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|solutionrelative:mafia.application\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -112,28 +116,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Mafia.Core\\Interfaces\\IOrderService.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "Mafia.Core\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:48:12.069Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsersService.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\UsersService.cs",
               "RelativeDocumentMoniker": "Mafia.Application\\Services\\UsersService.cs",
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\UsersService.cs",
               "RelativeToolTip": "Mafia.Application\\Services\\UsersService.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGIAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAqwGIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T18:55:06.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GameConfiguration.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Configurations\\GameConfiguration.cs",
               "RelativeDocumentMoniker": "Mafia.Persistence\\Configurations\\GameConfiguration.cs",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Cart.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "Mafia.Core\\Models\\Cart.cs",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Mafia.Core\\Models\\Product.cs",
@@ -171,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Mafia.API\\appsettings.Development.json",
@@ -183,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GetUserResponse.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Contracts\\GetUserResponse.cs",
               "RelativeDocumentMoniker": "Mafia.API\\Contracts\\GetUserResponse.cs",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IUsersService.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Interfaces\\IUsersService.cs",
               "RelativeDocumentMoniker": "Mafia.Core\\Interfaces\\IUsersService.cs",
@@ -208,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IFileRepository.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Core\\Interfaces\\IFileRepository.cs",
               "RelativeDocumentMoniker": "Mafia.Core\\Interfaces\\IFileRepository.cs",
@@ -220,20 +237,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FileRepository.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\FileRepository.cs",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\FileRepository.cs",
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\FileRepository.cs",
               "RelativeToolTip": "Mafia.Infrastructre\\FileRepository.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwC4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T13:33:57.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Mafia.API\\Properties\\launchSettings.json",
@@ -245,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Mafia.Infrastructre.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
@@ -258,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Mafia.Application.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
               "RelativeDocumentMoniker": "Mafia.Application\\Mafia.Application.csproj",
@@ -271,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Mafia.Core.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Mafia.Core.csproj",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Mafia.Core.csproj",
@@ -282,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "IJwtTokenProvider.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IJwtTokenProvider.cs",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IJwtTokenProvider.cs",
@@ -293,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\Class1.cs",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\Class1.cs",
@@ -304,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "IUsersRepository.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IUsersRepository.cs",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IUsersRepository.cs",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "IUsersService.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IUsersService.cs",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Interfaces\\IUsersService.cs",
@@ -326,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Models\\User.cs",
               "RelativeDocumentMoniker": "..\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (6)\\Mafia-main\\Mafia.Logic\\Models\\User.cs",
@@ -337,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Mafia.Persistence.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Mafia.Persistence.csproj",
               "RelativeDocumentMoniker": "Mafia.Persistence\\Mafia.Persistence.csproj",
@@ -350,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Contracts\\LoginResponse.cs",
               "RelativeDocumentMoniker": "Mafia.API\\Contracts\\LoginResponse.cs",
@@ -362,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Mafia.API.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Mafia.API.csproj",
               "RelativeDocumentMoniker": "Mafia.API\\Mafia.API.csproj",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Mafia.Persistence\\ApplicationDbContext.cs",
@@ -388,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Mafia.API\\Controllers\\UsersController.cs",
@@ -401,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UsersRepository.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\UsersRepository.cs",
               "RelativeDocumentMoniker": "Mafia.Persistence\\Repositories\\UsersRepository.cs",
@@ -414,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Program.cs",
               "RelativeDocumentMoniker": "Mafia.API\\Program.cs",
@@ -426,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\appsettings.json",
               "RelativeDocumentMoniker": "Mafia.API\\appsettings.json",
@@ -438,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "JwtTokenProvider.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\JwtTokenProvider.cs",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\JwtTokenProvider.cs",

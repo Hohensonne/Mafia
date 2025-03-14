@@ -27,7 +27,7 @@ public class FileRepository : IFileRepository
     public async Task<string> SaveProfileImageAsync(string userId, IFormFile file)
     {
         // Генерируем уникальное имя файла
-        string uniqueFileName = $"{userId}_{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+        string uniqueFileName = $"{userId}_{DateTime.Now.Ticks}_{Path.GetRandomFileName()}{Path.GetExtension(file.FileName)}";
         string filePath = Path.Combine(_basePath, uniqueFileName);
         
         // Сохраняем файл

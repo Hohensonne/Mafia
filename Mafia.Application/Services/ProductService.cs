@@ -22,12 +22,12 @@ namespace Mafia.Application.Services
             return await _productRepository.GetByCategoryAsync(category);
         }
 
-        public async Task<Product?> GetProductByIdAsync(Guid id)
+        public async Task<Product?> GetProductByIdAsync(string id)
         {
             return await _productRepository.GetByIdAsync(id);
         }
 
-        public async Task<Guid> CreateProductAsync(Product product)
+        public async Task<string> CreateProductAsync(Product product)
         {
             return await _productRepository.CreateAsync(product);
         }
@@ -37,12 +37,12 @@ namespace Mafia.Application.Services
             await _productRepository.UpdateAsync(product);
         }
 
-        public async Task DeleteProductAsync(Guid id)
+        public async Task DeleteProductAsync(string id)
         {
             await _productRepository.DeleteAsync(id);
         }
 
-        public async Task<bool> UpdateProductStockAsync(Guid id, int quantity)
+        public async Task<bool> UpdateProductStockAsync(string id, int quantity)
         {
             return await _productRepository.UpdateStockAsync(id, quantity);
         }

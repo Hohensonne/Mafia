@@ -6,10 +6,10 @@ namespace Mafia.Core.Interfaces
     {
         Task<IEnumerable<Product>> GetAllProductsAsync();
         Task<IEnumerable<Product>> GetProductsByCategoryAsync(string category);
-        Task<Product?> GetProductByIdAsync(Guid id);
-        Task<Guid> CreateProductAsync(Product product);
+        Task<Product?> GetProductByIdAsync(string id);
+        Task<string> CreateProductAsync(Product product);
         Task UpdateProductAsync(Product product);
-        Task DeleteProductAsync(Guid id);
-        Task<bool> UpdateProductStockAsync(Guid id, int quantity);
+        Task DeleteProductAsync(string id);
+        Task<bool> UpdateProductStockAsync(string id, int quantity);
     }
 } 

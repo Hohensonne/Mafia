@@ -25,7 +25,7 @@ namespace Mafia.Application.Services
             return await _photoRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Photo>> GetPhotosByGameAsync(Guid gameId)
+        public async Task<IEnumerable<Photo>> GetPhotosByGameAsync(string gameId)
         {
             return await _photoRepository.GetAllByGameIdAsync(gameId);
         }
@@ -35,12 +35,12 @@ namespace Mafia.Application.Services
             return await _photoRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<Photo?> GetPhotoByIdAsync(Guid id)
+        public async Task<Photo?> GetPhotoByIdAsync(string id)
         {
             return await _photoRepository.GetByIdAsync(id);
         }
 
-        public async Task<Guid> UploadPhotoAsync(string userId, Guid gameId, IFormFile file)
+        public async Task<string> UploadPhotoAsync(string userId, string gameId, IFormFile file)
         {
             // Проверяем, существует ли игра
             var game = await _gameRepository.GetByIdAsync(gameId);
@@ -55,7 +55,7 @@ namespace Mafia.Application.Services
             // Создаем запись о фото
             var photo = new Photo
             {
-                Url = url,
+                ImageUrl = url,
                 GameId = gameId,
                 UserId = userId,
                 UploadedAt = DateTime.UtcNow
@@ -64,7 +64,7 @@ namespace Mafia.Application.Services
             return await _photoRepository.CreateAsync(photo);
         }
 
-        public async Task DeletePhotoAsync(Guid id)
+        public async Task DeletePhotoAsync(string id)
         {
             var photo = await _photoRepository.GetByIdAsync(id);
             if (photo == null)
@@ -73,7 +73,7 @@ namespace Mafia.Application.Services
             }
 
             // Удаляем файл
-            await _fileRepository.DeleteProfileImageAsync(photo.Url);
+            await _fileRepository.DeleteProfileImageAsync(photo.ImageUrl);
 
             // Удаляем запись
             await _photoRepository.DeleteAsync(id);

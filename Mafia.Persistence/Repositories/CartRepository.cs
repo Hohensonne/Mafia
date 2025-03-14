@@ -21,14 +21,12 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Cart?> GetByIdAsync(Guid id)
+        public async Task<Cart?> GetByIdAsync(string id)
         {
-            return await _context.Carts
-                .Include(c => c.Product)
-                .FirstOrDefaultAsync(c => c.Id == id);
+            return await _context.Carts.FindAsync(id);
         }
 
-        public async Task<Cart?> GetByUserIdAndProductIdAsync(string userId, Guid productId)
+        public async Task<Cart?> GetByUserIdAndProductIdAsync(string userId, string productId)
         {
             return await _context.Carts
                 .FirstOrDefaultAsync(c => c.UserId == userId && c.ProductId == productId);
@@ -46,7 +44,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var cart = await _context.Carts.FindAsync(id);
             if (cart != null)
@@ -56,7 +54,7 @@ namespace Mafia.Persistence.Repositories
             }
         }
 
-        public async Task ClearCartAsync(string userId)
+        public async Task DeleteAllByUserIdAsync(string userId)
         {
             var cartItems = await _context.Carts
                 .Where(c => c.UserId == userId)

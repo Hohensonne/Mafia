@@ -19,7 +19,7 @@ namespace Mafia.Application.Services
             return await _cartRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<bool> AddToCartAsync(string userId, Guid productId, int quantity)
+        public async Task<bool> AddToCartAsync(string userId, string productId, int quantity)
         {
             // Проверяем, существует ли товар
             var product = await _productRepository.GetByIdAsync(productId);
@@ -52,7 +52,7 @@ namespace Mafia.Application.Services
             return true;
         }
 
-        public async Task<bool> UpdateCartItemAsync(Guid cartId, int quantity)
+        public async Task<bool> UpdateCartItemAsync(string cartId, int quantity)
         {
             var cartItem = await _cartRepository.GetByIdAsync(cartId);
             if (cartItem == null)
@@ -72,7 +72,7 @@ namespace Mafia.Application.Services
             return true;
         }
 
-        public async Task<bool> RemoveFromCartAsync(Guid cartId)
+        public async Task<bool> RemoveFromCartAsync(string cartId)
         {
             var cartItem = await _cartRepository.GetByIdAsync(cartId);
             if (cartItem == null)
@@ -86,7 +86,7 @@ namespace Mafia.Application.Services
 
         public async Task ClearCartAsync(string userId)
         {
-            await _cartRepository.ClearCartAsync(userId);
+            await _cartRepository.DeleteAllByUserIdAsync(userId);
         }
     }
 } 

@@ -5,15 +5,15 @@ namespace Mafia.Core.Interfaces
     public interface IGameRepository
     {
         Task<IEnumerable<Game>> GetAllAsync();
-        Task<IEnumerable<Game>> GetAllByLocationIdAsync(Guid locationId);
+        Task<IEnumerable<Game>> GetAllByLocationIdAsync(string locationId);
         Task<IEnumerable<Game>> GetUpcomingGamesAsync();
-        Task<Game?> GetByIdAsync(Guid id);
-        Task<Game?> GetByIdWithRegistrationsAsync(Guid id);
-        Task<Game?> GetByIdWithPhotosAsync(Guid id);
-        Task<Guid> CreateAsync(Game game);
+        Task<Game?> GetByIdAsync(string id);
+        Task<Game?> GetByIdWithRegistrationsAsync(string id);
+        Task<Game?> GetByIdWithPhotosAsync(string id);
+        Task<string> CreateAsync(Game game);
         Task UpdateAsync(Game game);
-        Task DeleteAsync(Guid id);
-        Task<bool> IncrementCurrentPlayersAsync(Guid id);
-        Task<bool> DecrementCurrentPlayersAsync(Guid id);
+        Task DeleteAsync(string id);
+        Task<bool> IncrementCurrentPlayersAsync(string id);
+        Task<bool> DecrementCurrentPlayersAsync(string id);
     }
 } 

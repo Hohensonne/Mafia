@@ -17,17 +17,17 @@ namespace Mafia.Application.Services
             return await _locationRepository.GetAllAsync();
         }
 
-        public async Task<Location?> GetLocationByIdAsync(Guid id)
+        public async Task<Location?> GetLocationByIdAsync(string id)
         {
             return await _locationRepository.GetByIdAsync(id);
         }
 
-        public async Task<Location?> GetLocationWithGamesAsync(Guid id)
+        public async Task<Location?> GetLocationWithGamesAsync(string id)
         {
             return await _locationRepository.GetByIdWithGamesAsync(id);
         }
 
-        public async Task<Guid> CreateLocationAsync(Location location)
+        public async Task<string> CreateLocationAsync(Location location)
         {
             return await _locationRepository.CreateAsync(location);
         }
@@ -37,7 +37,7 @@ namespace Mafia.Application.Services
             await _locationRepository.UpdateAsync(location);
         }
 
-        public async Task DeleteLocationAsync(Guid id)
+        public async Task DeleteLocationAsync(string id)
         {
             await _locationRepository.DeleteAsync(id);
         }

@@ -6,20 +6,20 @@ namespace Mafia.Application.Services
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        private readonly IOrderDetailRepository _orderDetailRepository;
         private readonly ICartRepository _cartRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IOrderDetailRepository _orderDetailRepository;
 
         public OrderService(
             IOrderRepository orderRepository,
-            IOrderDetailRepository orderDetailRepository,
             ICartRepository cartRepository,
-            IProductRepository productRepository)
+            IProductRepository productRepository,
+            IOrderDetailRepository orderDetailRepository)
         {
             _orderRepository = orderRepository;
-            _orderDetailRepository = orderDetailRepository;
             _cartRepository = cartRepository;
             _productRepository = productRepository;
+            _orderDetailRepository = orderDetailRepository;
         }
 
         public async Task<IEnumerable<Order>> GetAllOrdersAsync()
@@ -32,17 +32,17 @@ namespace Mafia.Application.Services
             return await _orderRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<Order?> GetOrderByIdAsync(Guid id)
+        public async Task<Order?> GetOrderByIdAsync(string id)
         {
             return await _orderRepository.GetByIdAsync(id);
         }
 
-        public async Task<Order?> GetOrderWithDetailsAsync(Guid id)
+        public async Task<Order?> GetOrderWithDetailsAsync(string id)
         {
             return await _orderRepository.GetByIdWithDetailsAsync(id);
         }
 
-        public async Task<Guid> CreateOrderFromCartAsync(string userId, PaymentMethodType paymentMethod)
+        public async Task<string> CreateOrderFromCartAsync(string userId, PaymentMethodType paymentMethod)
         {
             // Получаем корзину пользователя
             var cartItems = await _cartRepository.GetAllByUserIdAsync(userId);
@@ -101,12 +101,12 @@ namespace Mafia.Application.Services
             await _orderRepository.UpdateAsync(order);
 
             // Очищаем корзину
-            await _cartRepository.ClearCartAsync(userId);
+            await _cartRepository.DeleteAllByUserIdAsync(userId);
 
             return orderId;
         }
 
-        public async Task UpdateOrderStatusAsync(Guid orderId, string status)
+        public async Task UpdateOrderStatusAsync(string orderId, string status)
         {
             var order = await _orderRepository.GetByIdAsync(orderId);
             if (order == null)
@@ -118,7 +118,7 @@ namespace Mafia.Application.Services
             await _orderRepository.UpdateAsync(order);
         }
 
-        public async Task CancelOrderAsync(Guid orderId)
+        public async Task CancelOrderAsync(string orderId)
         {
             var order = await _orderRepository.GetByIdWithDetailsAsync(orderId);
             if (order == null)

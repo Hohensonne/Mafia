@@ -27,13 +27,13 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Order?> GetByIdAsync(Guid id)
+        public async Task<Order?> GetByIdAsync(string id)
         {
             return await _context.Orders
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 
-        public async Task<Order?> GetByIdWithDetailsAsync(Guid id)
+        public async Task<Order?> GetByIdWithDetailsAsync(string id)
         {
             return await _context.Orders
                 .Include(o => o.OrderDetails)
@@ -41,7 +41,7 @@ namespace Mafia.Persistence.Repositories
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 
-        public async Task<Guid> CreateAsync(Order order)
+        public async Task<string> CreateAsync(Order order)
         {
             await _context.Orders.AddAsync(order);
             await _context.SaveChangesAsync();
@@ -54,7 +54,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var order = await _context.Orders.FindAsync(id);
             if (order != null)
