@@ -287,3 +287,4 @@ D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.s
 I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.dll
 I:\Mafia\Mafia.API\obj\Debug\net9.0\refint\Mafia.API.dll
 I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.pdb
+D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
