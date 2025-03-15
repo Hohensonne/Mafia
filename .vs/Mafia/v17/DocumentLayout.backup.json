@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|solutionrelative:mafia.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.persistence\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|solutionrelative:mafia.persistence\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.persistence\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|solutionrelative:mafia.persistence\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83831C21-00B6-4F01-8847-7985F60EC897}|Mafia.Application\\Mafia.Application.csproj|solutionrelative:mafia.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4223775C-8AD7-4460-9296-858DCEB48625}|Mafia.API\\Mafia.API.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4223775C-8AD7-4460-9296-858DCEB48625}|Mafia.API\\Mafia.API.csproj|solutionrelative:mafia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,53 +22,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "Mafia.Persistence\\Repositories\\OrderRepository.cs",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\OrderRepository.cs",
-              "RelativeToolTip": "Mafia.Persistence\\Repositories\\OrderRepository.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwEgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T21:23:29.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "Mafia.Application\\Services\\OrderService.cs",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\OrderService.cs",
-              "RelativeToolTip": "Mafia.Application\\Services\\OrderService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAD4vy0AAAAIAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Program.cs",
+              "RelativeDocumentMoniker": "Mafia.API\\Program.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Program.cs",
+              "RelativeToolTip": "Mafia.API\\Program.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAKEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T21:21:00.717Z",
+              "WhenOpened": "2025-03-15T22:36:12.797Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartRepository.cs",
-              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\CartRepository.cs",
-              "RelativeDocumentMoniker": "Mafia.Persistence\\Repositories\\CartRepository.cs",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\CartRepository.cs",
-              "RelativeToolTip": "Mafia.Persistence\\Repositories\\CartRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T20:14:33.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\CartService.cs",
-              "RelativeDocumentMoniker": "Mafia.Application\\Services\\CartService.cs",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Application\\Services\\CartService.cs",
-              "RelativeToolTip": "Mafia.Application\\Services\\CartService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowBwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T19:59:35.688Z"
             }
           ]
         }

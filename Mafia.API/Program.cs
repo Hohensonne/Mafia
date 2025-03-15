@@ -148,10 +148,35 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
-var fileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.WebRootPath, "images"));
+Console.WriteLine($"WebRootPath: {builder.Environment.WebRootPath}");
+
+// Если WebRootPath равен null, установим его вручную
+if (string.IsNullOrEmpty(builder.Environment.WebRootPath))
+{
+    // Получаем путь к текущей директории приложения
+    string contentRoot = builder.Environment.ContentRootPath;
+    string webRootPath = Path.Combine(contentRoot, "wwwroot");
+    
+    // Устанавливаем WebRootPath
+    builder.Environment.WebRootPath = webRootPath;
+    
+    Console.WriteLine($"WebRootPath установлен вручную: {builder.Environment.WebRootPath}");
+}
+
+if (!Directory.Exists(builder.Environment.WebRootPath))
+{
+    Directory.CreateDirectory(builder.Environment.WebRootPath);
+}
+
+var imagesPath = Path.Combine(builder.Environment.WebRootPath, "images");
+if (!Directory.Exists(imagesPath))
+{
+    Directory.CreateDirectory(imagesPath);
+}
+
+var fileProvider = new PhysicalFileProvider(imagesPath);
 var requestPath = "/MyImages";
 
-// Enable displaying browser links.
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = fileProvider,
