@@ -17,39 +17,84 @@ public class FileRepository : IFileRepository
 
     public FileRepository(IWebHostEnvironment environment, IConfiguration configuration)
     {
-        _basePath = Path.Combine(environment.WebRootPath, "images", "profiles");
-        _baseUrl = configuration["FileStorage:BaseUrl"] ?? "/images/profiles";
+        _basePath = Path.Combine(environment.WebRootPath, "images");
+        _baseUrl = configuration["FileStorage:BaseUrl"] ?? "/images";
         
         if (!Directory.Exists(_basePath))
             Directory.CreateDirectory(_basePath);
+            
+        string profilesPath = Path.Combine(_basePath, "profiles");
+        if (!Directory.Exists(profilesPath))
+            Directory.CreateDirectory(profilesPath);
+            
+        string gamesPath = Path.Combine(_basePath, "games");
+        if (!Directory.Exists(gamesPath))
+            Directory.CreateDirectory(gamesPath);
+            
+        string productsPath = Path.Combine(_basePath, "products");
+        if (!Directory.Exists(productsPath))
+            Directory.CreateDirectory(productsPath);
     }
 
     public async Task<string> SaveProfileImageAsync(string userId, IFormFile file)
     {
-        // Генерируем уникальное имя файла
-        string uniqueFileName = $"{userId}_{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
-        string filePath = Path.Combine(_basePath, uniqueFileName);
+        return await SaveImage("profiles", userId, file);
+    }
+    
+    public Task DeleteProfileImageAsync(string imageUrl)
+    {
+        return DeleteImage(imageUrl, "profiles");
+    }
+
+    public async Task<string> SaveGamePhotoAsync(string gameId, IFormFile file)
+    {
+        return await SaveImage("games", gameId, file);
+    }
+
+    public Task DeleteGamePhotoAsync(string imageUrl)
+    {
+        return DeleteImage(imageUrl, "games");
+    }
+
+    public async Task<string> SaveProductImageAsync(string productId, IFormFile file)
+    {
+        return await SaveImage("products", productId, file);
+    }
+
+    public Task DeleteProductImageAsync(string imageUrl)
+    {
+        return DeleteImage(imageUrl, "products");
+    }
+
+
+    private async Task<string> SaveImage(string folder, string Id, IFormFile file)
+    {
+        string fileName = $"{Id}_{DateTime.Now.Ticks}{Path.GetExtension(file.FileName)}";
+        string filePath = Path.Combine(_basePath, folder, fileName);
         
-        // Сохраняем файл
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
         }
-        
-        return $"{_baseUrl}/{uniqueFileName}";
+
+        return $"{_baseUrl}/{folder}/{fileName}";
     }
 
-    public Task DeleteProfileImageAsync(string imageUrl)
+    private Task DeleteImage(string imageUrl, string folder)
     {
         if (string.IsNullOrEmpty(imageUrl))
             return Task.CompletedTask;
             
         string fileName = Path.GetFileName(imageUrl);
-        string filePath = Path.Combine(_basePath, fileName);
+        string filePath = Path.Combine(_basePath, folder, fileName);
         
         if (File.Exists(filePath))
             File.Delete(filePath);
+        else
+            throw new FileNotFoundException($"File {fileName} not found in {folder} folder");
             
         return Task.CompletedTask;
+        
     }
+
 }

@@ -35,3 +35,16 @@ D:\Программирование\Mafia\Mafia.Core\obj\Debug\net9.0\refint\Maf
 D:\Программирование\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.pdb
 D:\Программирование\Mafia\Mafia.Core\obj\Debug\net9.0\ref\Mafia.Core.dll
 D:\Программирование\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.sourcelink.json
+I:\Mafia\Mafia.Core\bin\Debug\net9.0\Mafia.Core.deps.json
+I:\Mafia\Mafia.Core\bin\Debug\net9.0\Mafia.Core.dll
+I:\Mafia\Mafia.Core\bin\Debug\net9.0\Mafia.Core.pdb
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.csproj.AssemblyReference.cache
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.GeneratedMSBuildEditorConfig.editorconfig
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.AssemblyInfoInputs.cache
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.AssemblyInfo.cs
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.csproj.CoreCompileInputs.cache
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.sourcelink.json
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.dll
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\refint\Mafia.Core.dll
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\Mafia.Core.pdb
+I:\Mafia\Mafia.Core\obj\Debug\net9.0\ref\Mafia.Core.dll

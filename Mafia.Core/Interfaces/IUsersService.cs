@@ -12,5 +12,6 @@ namespace Mafia.Core.Interfaces
         Task Update(string id, string userName, string email, string password);
         Task UpdateProfileImage(string email, IFormFile profileImage);
         Task<(string jwtToken, string refreshToken)> RefreshTokenAsync(string refreshToken);
+        Task<IEnumerable<User>> GetAll();
     }
 }

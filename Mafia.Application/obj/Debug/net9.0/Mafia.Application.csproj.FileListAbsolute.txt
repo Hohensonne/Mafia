@@ -37,3 +37,12 @@ D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\ref
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.pdb
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\ref\Mafia.Application.dll
 D:\Программирование\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.sourcelink.json
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.dll
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\refint\Mafia.Application.dll
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.pdb
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.csproj.AssemblyReference.cache
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.GeneratedMSBuildEditorConfig.editorconfig
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.AssemblyInfoInputs.cache
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.AssemblyInfo.cs
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.csproj.CoreCompileInputs.cache
+I:\Mafia\Mafia.Application\obj\Debug\net9.0\Mafia.Application.sourcelink.json

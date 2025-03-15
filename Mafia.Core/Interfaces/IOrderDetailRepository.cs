@@ -4,11 +4,11 @@ namespace Mafia.Core.Interfaces
 {
     public interface IOrderDetailRepository
     {
-        Task<IEnumerable<OrderDetail>> GetAllByOrderIdAsync(Guid orderId);
-        Task<OrderDetail?> GetByIdAsync(Guid id);
-        Task<Guid> CreateAsync(OrderDetail orderDetail);
+        Task<IEnumerable<OrderDetail>> GetAllByOrderIdAsync(string orderId);
+        Task<OrderDetail?> GetByIdAsync(string id);
+        Task<string> CreateAsync(OrderDetail orderDetail);
         Task UpdateAsync(OrderDetail orderDetail);
-        Task DeleteAsync(Guid id);
-        Task DeleteByOrderIdAsync(Guid orderId);
+        Task DeleteAsync(string id);
+        Task DeleteByOrderIdAsync(string orderId);
     }
 } 

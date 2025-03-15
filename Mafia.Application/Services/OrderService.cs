@@ -6,20 +6,20 @@ namespace Mafia.Application.Services
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
-        private readonly IOrderDetailRepository _orderDetailRepository;
         private readonly ICartRepository _cartRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IOrderDetailRepository _orderDetailRepository;
 
         public OrderService(
             IOrderRepository orderRepository,
-            IOrderDetailRepository orderDetailRepository,
             ICartRepository cartRepository,
-            IProductRepository productRepository)
+            IProductRepository productRepository,
+            IOrderDetailRepository orderDetailRepository)
         {
             _orderRepository = orderRepository;
-            _orderDetailRepository = orderDetailRepository;
             _cartRepository = cartRepository;
             _productRepository = productRepository;
+            _orderDetailRepository = orderDetailRepository;
         }
 
         public async Task<IEnumerable<Order>> GetAllOrdersAsync()
@@ -32,47 +32,43 @@ namespace Mafia.Application.Services
             return await _orderRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<Order?> GetOrderByIdAsync(Guid id)
+        public async Task<Order?> GetOrderByIdAsync(string id)
         {
             return await _orderRepository.GetByIdAsync(id);
         }
 
-        public async Task<Order?> GetOrderWithDetailsAsync(Guid id)
+        public async Task<Order?> GetOrderWithDetailsAsync(string id)
         {
             return await _orderRepository.GetByIdWithDetailsAsync(id);
         }
 
-        public async Task<Guid> CreateOrderFromCartAsync(string userId, PaymentMethodType paymentMethod)
+        public async Task<string> CreateOrderFromCartAsync(string userId)
         {
-            // Получаем корзину пользователя
             var cartItems = await _cartRepository.GetAllByUserIdAsync(userId);
             if (!cartItems.Any())
             {
-                throw new InvalidOperationException("Корзина пуста");
+                throw new InvalidOperationException("Cart is empty");
             }
 
-            // Проверяем наличие товаров
             foreach (var item in cartItems)
             {
                 var product = await _productRepository.GetByIdAsync(item.ProductId);
                 if (product == null || product.AvailableQuantity < item.Quantity)
                 {
-                    throw new InvalidOperationException($"Товар {product?.Name ?? "неизвестный"} недоступен в запрошенном количестве");
+                    throw new InvalidOperationException($"This item is out of stock {product?.Name ?? "unknown"} in the requested quantity");
                 }
             }
-
-            // Создаем заказ
+            
             var order = new Order
             {
+                Id = Guid.NewGuid().ToString(),
                 UserId = userId,
                 OrderDate = DateTime.UtcNow,
-                TotalAmount = 0, // Рассчитаем позже
-                Status = "Создан"
+                Status = OrderStatusEnum.Created
             };
 
-            var orderId = await _orderRepository.CreateAsync(order);
+            await _orderRepository.CreateAsync(order);
 
-            // Создаем детали заказа
             double totalAmount = 0;
             foreach (var item in cartItems)
             {
@@ -80,7 +76,8 @@ namespace Mafia.Application.Services
                 
                 var orderDetail = new OrderDetail
                 {
-                    OrderId = orderId,
+                    Id = Guid.NewGuid().ToString(),
+                    OrderId = order.Id,
                     ProductId = item.ProductId,
                     Quantity = item.Quantity,
                     Price = product.Price
@@ -88,58 +85,71 @@ namespace Mafia.Application.Services
 
                 await _orderDetailRepository.CreateAsync(orderDetail);
 
-                // Обновляем количество товара
-                await _productRepository.UpdateStockAsync(item.ProductId, -item.Quantity);
+                await _productRepository.UpdateStockAsync(item.ProductId, product.AvailableQuantity - item.Quantity);
 
-                // Рассчитываем общую сумму
                 totalAmount += product.Price * item.Quantity;
             }
 
-            // Обновляем общую сумму заказа
-            order.Id = orderId;
             order.TotalAmount = totalAmount;
             await _orderRepository.UpdateAsync(order);
 
-            // Очищаем корзину
-            await _cartRepository.ClearCartAsync(userId);
+            await _cartRepository.DeleteAllByUserIdAsync(userId);
 
-            return orderId;
+            return order.Id;
         }
 
-        public async Task UpdateOrderStatusAsync(Guid orderId, string status)
+        public async Task UpdateOrderStatusAsync(string orderId, string status)
         {
             var order = await _orderRepository.GetByIdAsync(orderId);
             if (order == null)
             {
-                throw new InvalidOperationException("Заказ не найден");
+                throw new InvalidOperationException("order not found");
             }
 
-            order.Status = status;
+            order.Status = (OrderStatusEnum)Enum.Parse(typeof(OrderStatusEnum), status);
+            if (order.Status == OrderStatusEnum.Cancelled)
+            {
+                await CancelOrderAsync(orderId);
+                return;
+            }
             await _orderRepository.UpdateAsync(order);
         }
 
-        public async Task CancelOrderAsync(Guid orderId)
+        public async Task CancelOrderAsync(string orderId, string userId)
         {
             var order = await _orderRepository.GetByIdWithDetailsAsync(orderId);
             if (order == null)
             {
-                throw new InvalidOperationException("Заказ не найден");
+                throw new InvalidOperationException("order not found");
             }
 
-            // Проверяем, можно ли отменить заказ
-            if (order.Status == "Доставлен" || order.Status == "Отменен")
+            if (order.UserId != userId)
             {
-                throw new InvalidOperationException("Невозможно отменить заказ в текущем статусе");
+                throw new InvalidOperationException("You cannot cancel this order");
+            }
+            await CancelOrderAsync(orderId);
+        }
+        
+
+        public async Task CancelOrderAsync(string orderId)
+        {
+            var order = await _orderRepository.GetByIdWithDetailsAsync(orderId);
+            if (order == null)
+            {
+                throw new InvalidOperationException("order not found");
             }
 
-            // Возвращаем товары на склад
+            if (order.Status == OrderStatusEnum.Delivered || order.Status == OrderStatusEnum.Cancelled)
+            {
+                throw new InvalidOperationException("Cannot cancel order in current status");
+            }
+
             foreach (var detail in order.OrderDetails)
             {
                 await _productRepository.UpdateStockAsync(detail.ProductId, detail.Quantity);
             }
 
-            // Обновляем статус заказа
-            order.Status = "Отменен";
+            order.Status = OrderStatusEnum.Cancelled;
             await _orderRepository.UpdateAsync(order);
         }
     }

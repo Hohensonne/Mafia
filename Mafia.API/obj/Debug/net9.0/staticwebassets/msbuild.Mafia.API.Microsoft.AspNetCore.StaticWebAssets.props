@@ -1,76 +1,256 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\games\d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Mafia.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Mafia.API</BasePath>
-      <RelativePath>images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png</RelativePath>
+      <RelativePath>images/games/d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mi85rab8o3</Fingerprint>
-      <Integrity>Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR+8=</Integrity>
+      <Fingerprint>tr7e0kr3nj</Fingerprint>
+      <Integrity>J6HswiUq79iz8/7GFpYL9DGu3skRe+0ZCBMSsBgvYxY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\games\d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Mafia.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Mafia.API</BasePath>
-      <RelativePath>images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png</RelativePath>
+      <RelativePath>images/products/46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mi85rab8o3</Fingerprint>
-      <Integrity>Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR+8=</Integrity>
+      <Fingerprint>ii7z5j031f</Fingerprint>
+      <Integrity>Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Mafia.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Mafia.API</BasePath>
-      <RelativePath>images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png</RelativePath>
+      <RelativePath>images/products/5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mi85rab8o3</Fingerprint>
-      <Integrity>Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR+8=</Integrity>
+      <Fingerprint>ii7z5j031f</Fingerprint>
+      <Integrity>Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Mafia.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Mafia.API</BasePath>
-      <RelativePath>images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png</RelativePath>
+      <RelativePath>images/products/9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>run1jwkq2a</Fingerprint>
-      <Integrity>A2JmcEnjbYYzf9oZ700P5a/3Nb+eXHUxiS2u4Lcn8pY=</Integrity>
+      <Fingerprint>ii7z5j031f</Fingerprint>
+      <Integrity>Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/products/95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ii7z5j031f</Fingerprint>
+      <Integrity>Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/products/abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ii7z5j031f</Fingerprint>
+      <Integrity>Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>57h71eoaln</Fingerprint>
+      <Integrity>LxSD99sMgwSdMKTry7Z8+Nzk0sE/rGAbuqLLOVOFq7c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>57h71eoaln</Fingerprint>
+      <Integrity>LxSD99sMgwSdMKTry7Z8+Nzk0sE/rGAbuqLLOVOFq7c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\577c1092-6266-474e-bb8d-cb747790e204_638776565112688412'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/577c1092-6266-474e-bb8d-cb747790e204_638776565112688412</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>57h71eoaln</Fingerprint>
+      <Integrity>LxSD99sMgwSdMKTry7Z8+Nzk0sE/rGAbuqLLOVOFq7c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\577c1092-6266-474e-bb8d-cb747790e204_638776565112688412'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kxbfdpwgcu</Fingerprint>
+      <Integrity>2OSznZOZ+femLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>57h71eoaln</Fingerprint>
+      <Integrity>LxSD99sMgwSdMKTry7Z8+Nzk0sE/rGAbuqLLOVOFq7c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>t7z90gw50b</Fingerprint>
+      <Integrity>iZrGoAxH++wZPlXihRJaPePLAVjAIKUKHU/gCcfaJ9Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kxbfdpwgcu</Fingerprint>
+      <Integrity>2OSznZOZ+femLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\f22b061d-6594-483a-809b-e065ee504db5_638776587763383156'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Mafia.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Mafia.API</BasePath>
+      <RelativePath>images/profiles/f22b061d-6594-483a-809b-e065ee504db5_638776587763383156</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>udepgnrhg0</Fingerprint>
+      <Integrity>7i7GQIQH6OzPjvqPhfKEL/OFlcyvds4nOOWyNITbi1A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\f22b061d-6594-483a-809b-e065ee504db5_638776587763383156'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

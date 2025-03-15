@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Mafia.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250312171955_migration6")]
-    partial class migration6
+    [Migration("20250315125115_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,15 +27,15 @@ namespace Mafia.Persistence.Migrations
 
             modelBuilder.Entity("Mafia.Core.Models.Cart", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("AddedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("integer");
@@ -55,9 +55,8 @@ namespace Mafia.Persistence.Migrations
 
             modelBuilder.Entity("Mafia.Core.Models.Game", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
@@ -67,9 +66,6 @@ namespace Mafia.Persistence.Migrations
 
                     b.Property<DateTime>("EndOfRegistration")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid>("LocationId")
-                        .HasColumnType("uuid");
 
                     b.Property<int>("MaxPlayers")
                         .HasColumnType("integer");
@@ -83,22 +79,20 @@ namespace Mafia.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LocationId");
-
                     b.ToTable("Games");
                 });
 
             modelBuilder.Entity("Mafia.Core.Models.GameRegistration", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("GameId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("GameId")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsApproved")
                         .HasColumnType("boolean");
@@ -116,29 +110,16 @@ namespace Mafia.Persistence.Migrations
                     b.ToTable("GameRegistrations");
                 });
 
-            modelBuilder.Entity("Mafia.Core.Models.Location", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Locations");
-                });
-
             modelBuilder.Entity("Mafia.Core.Models.Order", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
                     b.Property<double>("TotalAmount")
                         .HasColumnType("double precision");
@@ -156,18 +137,19 @@ namespace Mafia.Persistence.Migrations
 
             modelBuilder.Entity("Mafia.Core.Models.OrderDetail", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<double>("Price")
                         .HasColumnType("double precision");
 
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("integer");
@@ -183,19 +165,19 @@ namespace Mafia.Persistence.Migrations
 
             modelBuilder.Entity("Mafia.Core.Models.Photo", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
-                    b.Property<Guid>("GameId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("GameId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("UploadedAt")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -212,9 +194,8 @@ namespace Mafia.Persistence.Migrations
 
             modelBuilder.Entity("Mafia.Core.Models.Product", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
 
                     b.Property<int>("AvailableQuantity")
                         .HasColumnType("integer");
@@ -488,17 +469,6 @@ namespace Mafia.Persistence.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Mafia.Core.Models.Game", b =>
-                {
-                    b.HasOne("Mafia.Core.Models.Location", "Location")
-                        .WithMany("Games")
-                        .HasForeignKey("LocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Location");
-                });
-
             modelBuilder.Entity("Mafia.Core.Models.GameRegistration", b =>
                 {
                     b.HasOne("Mafia.Core.Models.Game", "Game")
@@ -623,11 +593,6 @@ namespace Mafia.Persistence.Migrations
                     b.Navigation("GameRegistrations");
 
                     b.Navigation("Photos");
-                });
-
-            modelBuilder.Entity("Mafia.Core.Models.Location", b =>
-                {
-                    b.Navigation("Games");
                 });
 
             modelBuilder.Entity("Mafia.Core.Models.Order", b =>

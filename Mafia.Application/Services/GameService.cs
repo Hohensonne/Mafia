@@ -1,5 +1,6 @@
 using Mafia.Core.Interfaces;
 using Mafia.Core.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Mafia.Application.Services
 {
@@ -8,15 +9,17 @@ namespace Mafia.Application.Services
         private readonly IGameRepository _gameRepository;
         private readonly IGameRegistrationRepository _gameRegistrationRepository;
         private readonly IPhotoRepository _photoRepository;
-
+        private readonly IFileRepository _fileRepository;
         public GameService(
             IGameRepository gameRepository,
             IGameRegistrationRepository gameRegistrationRepository,
-            IPhotoRepository photoRepository)
+            IPhotoRepository photoRepository,
+            IFileRepository fileRepository)
         {
             _gameRepository = gameRepository;
             _gameRegistrationRepository = gameRegistrationRepository;
             _photoRepository = photoRepository;
+            _fileRepository = fileRepository;
         }
 
         public async Task<IEnumerable<Game>> GetAllGamesAsync()
@@ -24,79 +27,104 @@ namespace Mafia.Application.Services
             return await _gameRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Game>> GetGamesByLocationAsync(Guid locationId)
-        {
-            return await _gameRepository.GetAllByLocationIdAsync(locationId);
-        }
 
         public async Task<IEnumerable<Game>> GetUpcomingGamesAsync()
         {
             return await _gameRepository.GetUpcomingGamesAsync();
         }
 
-        public async Task<Game?> GetGameByIdAsync(Guid id)
+        public async Task<Game?> GetGameByIdAsync(string id)
         {
             return await _gameRepository.GetByIdAsync(id);
         }
 
-        public async Task<Game?> GetGameWithRegistrationsAsync(Guid id)
+        public async Task<IEnumerable<Game>> GetRegisteredGamesAsync(string userId)
         {
-            return await _gameRepository.GetByIdWithRegistrationsAsync(id);
+            return await _gameRepository.GetRegisteredGamesAsync(userId);
         }
 
-        public async Task<Game?> GetGameWithPhotosAsync(Guid id)
+        public async Task<Game?> GetGameWithPhotosAsync(string id)
         {
             return await _gameRepository.GetByIdWithPhotosAsync(id);
         }
 
-        public async Task<Guid> CreateGameAsync(Game game)
+        public async Task<string> CreateGameAsync(string name, DateTime startTime, DateTime endOfRegistration, int maxPlayers)
         {
-            game.CreatedAt = DateTime.UtcNow;
-            game.CurrentPlayers = 0;
+            var game = new Game
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = name,
+                StartTime = startTime,
+                EndOfRegistration = endOfRegistration,
+                MaxPlayers = maxPlayers,
+                CreatedAt = DateTime.UtcNow,
+                CurrentPlayers = 0
+            };
+            
             return await _gameRepository.CreateAsync(game);
         }
 
-        public async Task UpdateGameAsync(Game game)
+        public async Task<string> UpdateGameAsync(string id, string name, DateTime startTime, DateTime endOfRegistration, int maxPlayers)
         {
+            var game = await _gameRepository.GetByIdAsync(id);
+            if (game == null)
+            {
+                throw new InvalidOperationException($"Game not found");
+            }
+            if (game.Name != name)
+            {
+                game.Name = name;
+            }
+            if (game.StartTime != startTime)
+            {
+                game.StartTime = startTime;
+            }
+            if (game.EndOfRegistration != endOfRegistration)
+            {
+                game.EndOfRegistration = endOfRegistration;
+            }
+            if (game.MaxPlayers != maxPlayers)
+            {
+                game.MaxPlayers = maxPlayers;
+            }
             await _gameRepository.UpdateAsync(game);
+            return game.Id;
         }
 
-        public async Task DeleteGameAsync(Guid id)
+        public async Task<string> DeleteGameAsync(string id)
         {
             await _gameRepository.DeleteAsync(id);
+            return id;
         }
 
-        public async Task<bool> RegisterUserForGameAsync(Guid gameId, string userId)
+
+        public async Task<string> RegisterUserForGameAsync(string gameId, string userId)
         {
-            // Проверяем, существует ли игра
             var game = await _gameRepository.GetByIdAsync(gameId);
             if (game == null)
             {
-                return false;
+                throw new Exception($"Game not found");
             }
 
-            // Проверяем, не закончилась ли регистрация
             if (game.EndOfRegistration < DateTime.UtcNow)
             {
-                return false;
+                throw new Exception($"Game registration has ended");
             }
 
-            // Проверяем, не заполнена ли игра
             if (game.CurrentPlayers >= game.MaxPlayers)
             {
-                return false;
+                throw new Exception($"Game is full");
             }
 
-            // Проверяем, не зарегистрирован ли уже пользователь
             var existingRegistration = await _gameRegistrationRepository.GetByGameIdAndUserIdAsync(gameId, userId);
             if (existingRegistration != null)
             {
-                return false;
+                throw new Exception($"User already registered for this game");
             }
 
-            // Создаем регистрацию
             var registration = new GameRegistration
             {
+                Id = Guid.NewGuid().ToString(),
                 GameId = gameId,
                 UserId = userId,
                 CreatedAt = DateTime.UtcNow,
@@ -105,51 +133,36 @@ namespace Mafia.Application.Services
 
             await _gameRegistrationRepository.CreateAsync(registration);
 
-            // Увеличиваем счетчик игроков
-            await _gameRepository.IncrementCurrentPlayersAsync(gameId);
-
-            return true;
+            await _gameRepository.IncrementPlayersAsync(gameId);
+            return gameId;
         }
 
-        public async Task<bool> CancelRegistrationAsync(Guid gameId, string userId)
+        public async Task<string> CancelRegistrationAsync(string gameId, string userId)
         {
             var registration = await _gameRegistrationRepository.GetByGameIdAndUserIdAsync(gameId, userId);
             if (registration == null)
             {
-                return false;
+                throw new Exception($"Game registration not found");
             }
 
             await _gameRegistrationRepository.DeleteAsync(registration.Id);
 
-            // Уменьшаем счетчик игроков
-            await _gameRepository.DecrementCurrentPlayersAsync(gameId);
-
-            return true;
+            await _gameRepository.DecrementPlayersAsync(gameId);
+            return gameId;
         }
 
-        public async Task<bool> ApproveRegistrationAsync(Guid registrationId)
+        public async Task<string> ApproveRegistrationAsync(string registrationId)
         {
             var registration = await _gameRegistrationRepository.GetByIdAsync(registrationId);
             if (registration == null)
             {
-                return false;
+                throw new InvalidOperationException($"Registration not found");
             }
 
             await _gameRegistrationRepository.ApproveAsync(registrationId);
-            return true;
+            return registrationId;
         }
 
-        public async Task<bool> AddPhotoToGameAsync(Photo photo)
-        {
-            var game = await _gameRepository.GetByIdAsync(photo.GameId);
-            if (game == null)
-            {
-                return false;
-            }
-
-            photo.UploadedAt = DateTime.UtcNow;
-            await _photoRepository.CreateAsync(photo);
-            return true;
-        }
+        
     }
 } 

@@ -13,7 +13,7 @@ namespace Mafia.Persistence.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<OrderDetail>> GetAllByOrderIdAsync(Guid orderId)
+        public async Task<IEnumerable<OrderDetail>> GetAllByOrderIdAsync(string orderId)
         {
             return await _context.OrderDetails
                 .Include(od => od.Product)
@@ -21,14 +21,14 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<OrderDetail?> GetByIdAsync(Guid id)
+        public async Task<OrderDetail?> GetByIdAsync(string id)
         {
             return await _context.OrderDetails
                 .Include(od => od.Product)
                 .FirstOrDefaultAsync(od => od.Id == id);
         }
 
-        public async Task<Guid> CreateAsync(OrderDetail orderDetail)
+        public async Task<string> CreateAsync(OrderDetail orderDetail)
         {
             await _context.OrderDetails.AddAsync(orderDetail);
             await _context.SaveChangesAsync();
@@ -41,7 +41,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var orderDetail = await _context.OrderDetails.FindAsync(id);
             if (orderDetail != null)
@@ -51,7 +51,7 @@ namespace Mafia.Persistence.Repositories
             }
         }
 
-        public async Task DeleteByOrderIdAsync(Guid orderId)
+        public async Task DeleteByOrderIdAsync(string orderId)
         {
             var orderDetails = await _context.OrderDetails
                 .Where(od => od.OrderId == orderId)

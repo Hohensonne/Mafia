@@ -25,7 +25,7 @@ namespace Mafia.Application.Services
             return await _photoRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Photo>> GetPhotosByGameAsync(Guid gameId)
+        public async Task<IEnumerable<Photo>> GetPhotosByGameAsync(string gameId)
         {
             return await _photoRepository.GetAllByGameIdAsync(gameId);
         }
@@ -35,48 +35,47 @@ namespace Mafia.Application.Services
             return await _photoRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<Photo?> GetPhotoByIdAsync(Guid id)
+        public async Task<Photo?> GetPhotoByIdAsync(string id)
         {
             return await _photoRepository.GetByIdAsync(id);
         }
 
-        public async Task<Guid> UploadPhotoAsync(string userId, Guid gameId, IFormFile file)
+         public async Task<string> AddPhotoToGameAsync(string gameId, string userId, IFormFile file)
         {
-            // Проверяем, существует ли игра
             var game = await _gameRepository.GetByIdAsync(gameId);
             if (game == null)
             {
-                throw new InvalidOperationException("Игра не найдена");
+                throw new InvalidOperationException($"Game not found");
             }
 
-            // Сохраняем файл
-            string url = await _fileRepository.SaveProfileImageAsync(userId, file);
-
-            // Создаем запись о фото
+            var imageUrl = await _fileRepository.SaveGamePhotoAsync(gameId, file);
+    
             var photo = new Photo
             {
-                Url = url,
+                Id = Guid.NewGuid().ToString(),
                 GameId = gameId,
                 UserId = userId,
-                UploadedAt = DateTime.UtcNow
+                UploadedAt = DateTime.UtcNow,
+                ImageUrl = imageUrl
             };
-
-            return await _photoRepository.CreateAsync(photo);
+            
+            await _photoRepository.CreateAsync(photo);
+            return photo.Id;
         }
-
-        public async Task DeletePhotoAsync(Guid id)
+        public async Task<string> DeletePhotoAsync(string photoId, string userId)
         {
-            var photo = await _photoRepository.GetByIdAsync(id);
+            var photo = await _photoRepository.GetByIdAsync(photoId);
             if (photo == null)
             {
-                throw new InvalidOperationException("Фото не найдено");
+                throw new InvalidOperationException($"Photo not found");
             }
-
-            // Удаляем файл
-            await _fileRepository.DeleteProfileImageAsync(photo.Url);
-
-            // Удаляем запись
-            await _photoRepository.DeleteAsync(id);
+            if (photo.UserId != userId)
+            {
+                throw new InvalidOperationException($"You are not allowed to delete this photo");
+            }
+            await _fileRepository.DeleteGamePhotoAsync(photo.ImageUrl);
+            await _photoRepository.DeleteAsync(photoId);
+            return photoId;
         }
     }
 } 

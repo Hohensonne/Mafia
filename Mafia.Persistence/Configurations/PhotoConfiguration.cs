@@ -10,7 +10,7 @@ public class PhotoConfiguration : IEntityTypeConfiguration<Photo>
     public void Configure(EntityTypeBuilder<Photo> builder)
     {
         builder.HasKey(e => e.Id);
-        builder.Property(e => e.Url).IsRequired();
+        builder.Property(e => e.ImageUrl).IsRequired();
         builder.Property(e => e.GameId).IsRequired();
         builder.Property(e => e.UserId).IsRequired();
         builder.Property(e => e.UploadedAt).IsRequired();

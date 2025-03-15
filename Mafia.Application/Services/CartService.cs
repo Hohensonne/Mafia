@@ -19,60 +19,56 @@ namespace Mafia.Application.Services
             return await _cartRepository.GetAllByUserIdAsync(userId);
         }
 
-        public async Task<bool> AddToCartAsync(string userId, Guid productId, int quantity)
+        public async Task<Cart> UpdateCartItemAsync(string userId, string productId, int quantity)
         {
-            // Проверяем, существует ли товар
-            var product = await _productRepository.GetByIdAsync(productId);
-            if (product == null || product.AvailableQuantity < quantity)
+            if (quantity < 0)
             {
-                return false;
+                throw new InvalidOperationException("Quantity cant be negative");
+            }
+            var cartItem = await _cartRepository.GetByUserIdAndProductIdAsync(userId, productId);
+            if (cartItem == null && quantity == 0)
+            {
+                throw new InvalidOperationException("Cart item not found and cant be deleted");
             }
 
-            // Проверяем, есть ли уже этот товар в корзине
-            var existingCartItem = await _cartRepository.GetByUserIdAndProductIdAsync(userId, productId);
-            if (existingCartItem != null)
+            var product = await _productRepository.GetByIdAsync(productId);
+            if (product == null)
             {
-                // Обновляем количество
-                existingCartItem.Quantity += quantity;
-                await _cartRepository.UpdateAsync(existingCartItem);
+                throw new InvalidOperationException("Product not found");
             }
-            else
+            if (quantity > product.AvailableQuantity)
             {
-                // Создаем новый элемент корзины
-                var cartItem = new Cart
+                throw new InvalidOperationException("Not enough items in stock");
+            }
+            if (quantity == 0)
+            {
+                await _cartRepository.DeleteAsync(cartItem.Id);
+                return null;
+            }
+            if (cartItem == null)
+            {
+                cartItem = new Cart
                 {
+                    Id = Guid.NewGuid().ToString(),
                     UserId = userId,
                     ProductId = productId,
                     Quantity = quantity,
                     AddedAt = DateTime.UtcNow
                 };
                 await _cartRepository.AddAsync(cartItem);
+                return cartItem;
             }
-
-            return true;
+            else
+            {
+                cartItem.Quantity = quantity;
+                await _cartRepository.UpdateAsync(cartItem);
+                return cartItem;
+            }
         }
 
-        public async Task<bool> UpdateCartItemAsync(Guid cartId, int quantity)
-        {
-            var cartItem = await _cartRepository.GetByIdAsync(cartId);
-            if (cartItem == null)
-            {
-                return false;
-            }
+        
 
-            // Проверяем доступность товара
-            var product = await _productRepository.GetByIdAsync(cartItem.ProductId);
-            if (product == null || product.AvailableQuantity < quantity)
-            {
-                return false;
-            }
-
-            cartItem.Quantity = quantity;
-            await _cartRepository.UpdateAsync(cartItem);
-            return true;
-        }
-
-        public async Task<bool> RemoveFromCartAsync(Guid cartId)
+        public async Task<bool> RemoveFromCartAsync(string cartId)
         {
             var cartItem = await _cartRepository.GetByIdAsync(cartId);
             if (cartItem == null)
@@ -86,7 +82,7 @@ namespace Mafia.Application.Services
 
         public async Task ClearCartAsync(string userId)
         {
-            await _cartRepository.ClearCartAsync(userId);
+            await _cartRepository.DeleteAllByUserIdAsync(userId);
         }
     }
 } 

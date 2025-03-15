@@ -13,17 +13,22 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.StaticFiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IGameService, GameService>();
-builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
+builder.Services.AddScoped<IGameRegistrationService, GameRegistrationService>();
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
 
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 builder.Services.AddTransient<IFileRepository, FileRepository>();
@@ -32,7 +37,6 @@ builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 builder.Services.AddTransient<IGameRegistrationRepository, GameRegistrationRepository>();
 builder.Services.AddTransient<IPhotoRepository, PhotoRepository>();
 builder.Services.AddTransient<IGameRepository, GameRepository>();
-builder.Services.AddTransient<ILocationRepository, LocationRepository>();
 builder.Services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
@@ -123,6 +127,9 @@ builder.Services.AddAuthentication(options =>
     
 });
 
+builder.Services.AddDirectoryBrowser();
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -139,8 +146,23 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Добавляем поддержку статических файлов
 app.UseStaticFiles();
+
+var fileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.WebRootPath, "images"));
+var requestPath = "/MyImages";
+
+// Enable displaying browser links.
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = fileProvider,
+    RequestPath = requestPath
+});
+
+app.UseDirectoryBrowser(new DirectoryBrowserOptions
+{
+    FileProvider = fileProvider,
+    RequestPath = requestPath
+});
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -159,7 +181,7 @@ using (var scope = app.Services.CreateScope())
         
         // Создаем администратора, если его нет
         var userManager = services.GetRequiredService<UserManager<User>>();
-        var adminEmail = "admin@example.com";
+        var adminEmail = "admin@123.com";
         
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser == null)

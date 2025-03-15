@@ -38,12 +38,13 @@ namespace Mafia.API.Controllers
             }
         }
 
-        //[HttpGet("getall")]
-        //public async Task<ActionResult> GetAll()
-        //{
-        //    var users = await _usersService.GetAll();
-        //    return Ok(users);
-        //}   
+        [HttpGet("get-all")]
+        [Authorize(Roles = "Admin, Moderator")]
+        public async Task<ActionResult> GetAll()
+        {
+            var users = await _usersService.GetAll();
+            return Ok(users);
+        }   
 
 
         [HttpPost("create")]
@@ -75,7 +76,7 @@ namespace Mafia.API.Controllers
             }
         }
 
-        [HttpPost("updateProfileImage")]
+        [HttpPost("update-profile-image")]
         [Authorize]
         public async Task<IActionResult> UpdateProfileImage([FromForm] UpdateProfileImageRequest request)
         {
@@ -94,11 +95,11 @@ namespace Mafia.API.Controllers
         
 
         [HttpPost("refresh-token")]
-        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenRequest request)
         {
             try
             {
-                var (newJwtToken, newRefreshToken) = await _usersService.RefreshTokenAsync(refreshToken);
+                (string newJwtToken, string newRefreshToken) = await _usersService.RefreshTokenAsync(request.RefreshToken);
                 return Ok(new LoginResponse(newJwtToken, newRefreshToken));
             }
             catch (Exception ex)

@@ -6,10 +6,10 @@ namespace Mafia.Core.Interfaces
     public interface IPhotoService
     {
         Task<IEnumerable<Photo>> GetAllPhotosAsync();
-        Task<IEnumerable<Photo>> GetPhotosByGameAsync(Guid gameId);
+        Task<IEnumerable<Photo>> GetPhotosByGameAsync(string gameId);
         Task<IEnumerable<Photo>> GetPhotosByUserAsync(string userId);
-        Task<Photo?> GetPhotoByIdAsync(Guid id);
-        Task<Guid> UploadPhotoAsync(string userId, Guid gameId, IFormFile file);
-        Task DeletePhotoAsync(Guid id);
+        Task<Photo?> GetPhotoByIdAsync(string id);
+        Task<string> AddPhotoToGameAsync(string gameId, string userId, IFormFile file);
+        Task<string> DeletePhotoAsync(string photoId, string userId);
     }
 } 

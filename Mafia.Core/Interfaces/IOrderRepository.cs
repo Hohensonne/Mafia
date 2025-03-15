@@ -6,10 +6,9 @@ namespace Mafia.Core.Interfaces
     {
         Task<IEnumerable<Order>> GetAllAsync();
         Task<IEnumerable<Order>> GetAllByUserIdAsync(string userId);
-        Task<Order?> GetByIdAsync(Guid id);
-        Task<Order?> GetByIdWithDetailsAsync(Guid id);
-        Task<Guid> CreateAsync(Order order);
+        Task<Order?> GetByIdAsync(string id);
+        Task<Order?> GetByIdWithDetailsAsync(string id);
+        Task<string> CreateAsync(Order order);
         Task UpdateAsync(Order order);
-        Task DeleteAsync(Guid id);
     }
 } 

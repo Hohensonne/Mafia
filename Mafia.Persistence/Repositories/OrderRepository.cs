@@ -16,7 +16,23 @@ namespace Mafia.Persistence.Repositories
         public async Task<IEnumerable<Order>> GetAllAsync()
         {
             return await _context.Orders
-                .Include(o => o.User)
+                .Include(o => o.OrderDetails)
+                .Select(o => new Order
+                {
+                    Id = o.Id,
+                    UserId = o.UserId,
+                    OrderDate = o.OrderDate,
+                    Status = o.Status,
+                    TotalAmount = o.TotalAmount,
+                    OrderDetails = o.OrderDetails.Select(od => new OrderDetail
+                    {
+                        Id = od.Id,
+                        OrderId = od.OrderId,
+                        ProductId = od.ProductId,
+                        Quantity = od.Quantity,
+                        Price = od.Price
+                    }).ToList()
+                })
                 .ToListAsync();
         }
 
@@ -27,13 +43,13 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Order?> GetByIdAsync(Guid id)
+        public async Task<Order?> GetByIdAsync(string id)
         {
             return await _context.Orders
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 
-        public async Task<Order?> GetByIdWithDetailsAsync(Guid id)
+        public async Task<Order?> GetByIdWithDetailsAsync(string id)
         {
             return await _context.Orders
                 .Include(o => o.OrderDetails)
@@ -41,7 +57,7 @@ namespace Mafia.Persistence.Repositories
                 .FirstOrDefaultAsync(o => o.Id == id);
         }
 
-        public async Task<Guid> CreateAsync(Order order)
+        public async Task<string> CreateAsync(Order order)
         {
             await _context.Orders.AddAsync(order);
             await _context.SaveChangesAsync();
@@ -54,14 +70,6 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
-        {
-            var order = await _context.Orders.FindAsync(id);
-            if (order != null)
-            {
-                _context.Orders.Remove(order);
-                await _context.SaveChangesAsync();
-            }
-        }
+        
     }
 } 

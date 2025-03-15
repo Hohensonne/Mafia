@@ -1,52 +1,172 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.mi85rab8o3.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/games/d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\games\d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mi85rab8o3"},{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:36:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-J6HswiUq79iz8/7GFpYL9DGu3skRe\u002B0ZCBMSsBgvYxY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"22974"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022J6HswiUq79iz8/7GFpYL9DGu3skRe\u002B0ZCBMSsBgvYxY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:54:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_4d446f47-1d39-4eb9-8a1a-ca68bbbf7d2f.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/games/d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.tr7e0kr3nj.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\games\d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:36:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"tr7e0kr3nj"},{"Name":"integrity","Value":"sha256-J6HswiUq79iz8/7GFpYL9DGu3skRe\u002B0ZCBMSsBgvYxY="},{"Name":"label","Value":"_content/Mafia.API/images/games/d810d400-330b-4c7e-9875-d94fbafe5f0c_638776760725867334.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"22974"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022J6HswiUq79iz8/7GFpYL9DGu3skRe\u002B0ZCBMSsBgvYxY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:54:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.mi85rab8o3.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.ii7z5j031f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mi85rab8o3"},{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:37:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ii7z5j031f"},{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="},{"Name":"label","Value":"_content/Mafia.API/images/products/46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_aa257c5e-3b42-4e18-961b-02b35e7d216d.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\46db191f-4725-44c9-806d-8d2b2ad4561e_638776776194255441.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:37:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.mi85rab8o3.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.ii7z5j031f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mi85rab8o3"},{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:37:10 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ii7z5j031f"},{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="},{"Name":"label","Value":"_content/Mafia.API/images/products/5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_d46d3d64-0881-477a-9c79-556f138b128f.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\5339a1a1-7d7d-4020-850e-500193881fa9_638776776283245800.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"515636"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Xs0NaE/kviIv1r9AsGYj3C3Ctm5hmegfWsdPEqPAR\u002B8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:37:10 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.ii7z5j031f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-A2JmcEnjbYYzf9oZ700P5a/3Nb\u002BeXHUxiS2u4Lcn8pY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"56568"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A2JmcEnjbYYzf9oZ700P5a/3Nb\u002BeXHUxiS2u4Lcn8pY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:24:05 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ii7z5j031f"},{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="},{"Name":"label","Value":"_content/Mafia.API/images/products/9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.run1jwkq2a.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\9133ccb3-7072-407e-8bea-80b2b1e09753_638776776276158525.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"run1jwkq2a"},{"Name":"integrity","Value":"sha256-A2JmcEnjbYYzf9oZ700P5a/3Nb\u002BeXHUxiS2u4Lcn8pY="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/53f654db-30a3-467b-a458-5878bfbdef56_f41c451f-2f8c-454b-93cb-8633b36dad79.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"56568"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A2JmcEnjbYYzf9oZ700P5a/3Nb\u002BeXHUxiS2u4Lcn8pY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Mar 2025 19:24:05 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 20:20:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.ii7z5j031f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ii7z5j031f"},{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="},{"Name":"label","Value":"_content/Mafia.API/images/products/95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:50:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\95a3bed4-6477-4b32-8e9b-f905e0b5a4de_638776758047408327.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:50:04 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.ii7z5j031f.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ii7z5j031f"},{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="},{"Name":"label","Value":"_content/Mafia.API/images/products/abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:24:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/products/abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\products\abbfb434-67fe-41f8-b8c0-840b7c3723c5_638776742843350739.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"509337"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Nt50MHy5dam1tZ9oTqchxXU4nKy43kIIVljsuVtPK8w=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 19:24:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:36:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179.57h71eoaln">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"57h71eoaln"},{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/0520715b-a79c-4faf-87b0-959cbfdb553e_638776569605105179"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:36:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:28:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501.57h71eoaln">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"57h71eoaln"},{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/34ad3b39-01ae-4490-a460-54011c8f2593_638776565298035501"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:28:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/577c1092-6266-474e-bb8d-cb747790e204_638776565112688412">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\577c1092-6266-474e-bb8d-cb747790e204_638776565112688412'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:28:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/577c1092-6266-474e-bb8d-cb747790e204_638776565112688412.57h71eoaln">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\577c1092-6266-474e-bb8d-cb747790e204_638776565112688412'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"57h71eoaln"},{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/577c1092-6266-474e-bb8d-cb747790e204_638776565112688412"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:28:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"247922"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00222OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:26:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239.kxbfdpwgcu">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kxbfdpwgcu"},{"Name":"integrity","Value":"sha256-2OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/800f372a-f1a2-4ec0-8d0a-14002b21fcb6_638776563863295239"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"247922"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00222OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:26:26 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:35:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360.57h71eoaln">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"57h71eoaln"},{"Name":"integrity","Value":"sha256-LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/a3059237-950b-4d75-913d-9b2d5396d6c5_638776569536032360"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"561581"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022LxSD99sMgwSdMKTry7Z8\u002BNzk0sE/rGAbuqLLOVOFq7c=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:35:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iZrGoAxH\u002B\u002BwZPlXihRJaPePLAVjAIKUKHU/gCcfaJ9Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"191060"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iZrGoAxH\u002B\u002BwZPlXihRJaPePLAVjAIKUKHU/gCcfaJ9Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 15:30:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.t7z90gw50b.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"t7z90gw50b"},{"Name":"integrity","Value":"sha256-iZrGoAxH\u002B\u002BwZPlXihRJaPePLAVjAIKUKHU/gCcfaJ9Y="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/cb051b77-5ba8-4329-a5af-dbe5a1760b6f_638776602560642119.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"191060"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022iZrGoAxH\u002B\u002BwZPlXihRJaPePLAVjAIKUKHU/gCcfaJ9Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 15:30:56 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"247922"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00222OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:26:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227.kxbfdpwgcu">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kxbfdpwgcu"},{"Name":"integrity","Value":"sha256-2OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/db01d2a4-c5fd-4991-8be4-40a79021e3ca_638776564014883227"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"247922"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00222OSznZOZ\u002BfemLEL7DY/bXTfKYqwxkce6iLKzKYLnXUw=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 14:26:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/f22b061d-6594-483a-809b-e065ee504db5_638776587763383156">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\f22b061d-6594-483a-809b-e065ee504db5_638776587763383156'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7i7GQIQH6OzPjvqPhfKEL/OFlcyvds4nOOWyNITbi1A="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"43684"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00227i7GQIQH6OzPjvqPhfKEL/OFlcyvds4nOOWyNITbi1A=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 15:06:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Mafia.API/images/profiles/f22b061d-6594-483a-809b-e065ee504db5_638776587763383156.udepgnrhg0">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\f22b061d-6594-483a-809b-e065ee504db5_638776587763383156'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"udepgnrhg0"},{"Name":"integrity","Value":"sha256-7i7GQIQH6OzPjvqPhfKEL/OFlcyvds4nOOWyNITbi1A="},{"Name":"label","Value":"_content/Mafia.API/images/profiles/f22b061d-6594-483a-809b-e065ee504db5_638776587763383156"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43684"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00227i7GQIQH6OzPjvqPhfKEL/OFlcyvds4nOOWyNITbi1A=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 15:06:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

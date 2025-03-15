@@ -19,7 +19,6 @@ namespace Mafia.Persistence
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Location> Locations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -31,7 +30,6 @@ namespace Mafia.Persistence
             builder.ApplyConfiguration(new OrderDetailConfiguration());
             builder.ApplyConfiguration(new PhotoConfiguration());
             builder.ApplyConfiguration(new ProductConfiguration());
-            builder.ApplyConfiguration(new LocationConfiguration());
             SeedRoles(builder);
         }
         

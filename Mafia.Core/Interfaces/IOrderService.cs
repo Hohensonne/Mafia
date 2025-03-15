@@ -15,10 +15,11 @@ namespace Mafia.Core.Interfaces
     {
         Task<IEnumerable<Order>> GetAllOrdersAsync();
         Task<IEnumerable<Order>> GetUserOrdersAsync(string userId);
-        Task<Order?> GetOrderByIdAsync(Guid id);
-        Task<Order?> GetOrderWithDetailsAsync(Guid id);
-        Task<Guid> CreateOrderFromCartAsync(string userId, PaymentMethodType paymentMethod);
-        Task UpdateOrderStatusAsync(Guid orderId, string status);
-        Task CancelOrderAsync(Guid orderId);
+        Task<Order?> GetOrderByIdAsync(string id);
+        Task<Order?> GetOrderWithDetailsAsync(string id);
+        Task<string> CreateOrderFromCartAsync(string userId);
+        Task UpdateOrderStatusAsync(string orderId, string status);
+        Task CancelOrderAsync(string orderId);
+        Task CancelOrderAsync(string orderId, string userId);
     }
 } 

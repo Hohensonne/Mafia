@@ -21,7 +21,7 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<GameRegistration>> GetAllByGameIdAsync(Guid gameId)
+        public async Task<IEnumerable<GameRegistration>> GetAllByGameIdAsync(string gameId)
         {
             return await _context.GameRegistrations
                 .Include(gr => gr.User)
@@ -37,7 +37,7 @@ namespace Mafia.Persistence.Repositories
                 .ToListAsync();
         }
 
-        public async Task<GameRegistration?> GetByIdAsync(Guid id)
+        public async Task<GameRegistration?> GetByIdAsync(string id)
         {
             return await _context.GameRegistrations
                 .Include(gr => gr.Game)
@@ -45,13 +45,13 @@ namespace Mafia.Persistence.Repositories
                 .FirstOrDefaultAsync(gr => gr.Id == id);
         }
 
-        public async Task<GameRegistration?> GetByGameIdAndUserIdAsync(Guid gameId, string userId)
+        public async Task<GameRegistration?> GetByGameIdAndUserIdAsync(string gameId, string userId)
         {
             return await _context.GameRegistrations
                 .FirstOrDefaultAsync(gr => gr.GameId == gameId && gr.UserId == userId);
         }
 
-        public async Task<Guid> CreateAsync(GameRegistration registration)
+        public async Task<string> CreateAsync(GameRegistration registration)
         {
             await _context.GameRegistrations.AddAsync(registration);
             await _context.SaveChangesAsync();
@@ -64,7 +64,7 @@ namespace Mafia.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             var registration = await _context.GameRegistrations.FindAsync(id);
             if (registration != null)
@@ -74,7 +74,7 @@ namespace Mafia.Persistence.Repositories
             }
         }
 
-        public async Task ApproveAsync(Guid id)
+        public async Task ApproveAsync(string id)
         {
             var registration = await _context.GameRegistrations.FindAsync(id);
             if (registration != null)

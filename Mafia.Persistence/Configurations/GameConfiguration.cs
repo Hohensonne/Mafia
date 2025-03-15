@@ -15,6 +15,5 @@ public class GameConfiguration : IEntityTypeConfiguration<Game>
         builder.Property(e => e.CurrentPlayers).IsRequired();
         builder.Property(e => e.CreatedAt).IsRequired();
         builder.HasMany(e => e.GameRegistrations).WithOne(e => e.Game).HasForeignKey(e => e.GameId);
-        builder.HasOne(e => e.Location).WithMany(e => e.Games).HasForeignKey(e => e.LocationId);
     }
 }

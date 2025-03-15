@@ -284,4 +284,6 @@ D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.p
 D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.genruntimeconfig.cache
 D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\ref\Mafia.API.dll
 D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.sourcelink.json
-D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.dll
+I:\Mafia\Mafia.API\obj\Debug\net9.0\refint\Mafia.API.dll
+I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.pdb

@@ -33,23 +33,58 @@ namespace Mafia.Application.Services
             return await _repository.GetByEmail(email);
         }
 
+        public async Task<IEnumerable<User>> GetAll()
+        {
+            return await _repository.GetAll();
+        }
+
 
         public async Task Register(string userName, string email, string password, IFormFile profileImage)
         {
-            var user = new User { UserName = userName, Email = email, RegistrationDate = DateTime.UtcNow };
-            
-            if (profileImage != null)
+
+            var userId = Guid.NewGuid().ToString();
+            string imageUrl = "";
+            if(profileImage != null)
             {
-                var imageUrl = await _fileRepository.SaveProfileImageAsync(user.Id, profileImage);
-                user.ProfileImageUrl = imageUrl;
+                imageUrl = await _fileRepository.SaveProfileImageAsync(userId, profileImage);
             }
+            var user = new User { 
+                Id = userId,
+                UserName = userName,
+                Email = email,
+                RegistrationDate = DateTime.UtcNow,
+                ProfileImageUrl = imageUrl
+            };
             var result = await _repository.Create(user, password);
             if (!result.Succeeded)
             {
                 var errors = string.Join(", ", result.Errors.Select(e => e.Description));
                 throw new AuthenticationFailureException($"user not created: {errors}");
             }
-            await _userManager.AddToRoleAsync(user, "User");
+            await _userManager.AddToRoleAsync(user, "User");          
+
+
+
+            //var user = new User { 
+            //    UserName = userName, 
+            //    Email = email, 
+            //    RegistrationDate = DateTime.UtcNow 
+            //    };
+            //var result = await _repository.Create(user, password);
+            //if (!result.Succeeded)
+            //{
+            //    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+            //    throw new AuthenticationFailureException($"user not created: {errors}");
+            //}
+            //if (profileImage != null)
+            //{
+            //    var imageUrl = await _fileRepository.SaveProfileImageAsync(user.Id, profileImage);
+            //    user.ProfileImageUrl = imageUrl;
+            //    await _repository.UpdateProfileImage(user.Id, imageUrl);
+            //}
+            //
+            //
+            //await _userManager.AddToRoleAsync(user, "User");
         }
 
         public async Task<(string jwtToken, string refreshToken)> Login(string email, string password)
