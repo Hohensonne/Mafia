@@ -132,7 +132,10 @@ builder.Services.AddDirectoryBrowser();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+// Проверяем переменную окружения для Swagger
+var enableSwagger = builder.Configuration.GetValue<bool>("EnableSwagger", false);
+
+if (app.Environment.IsDevelopment() || enableSwagger)
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
@@ -141,7 +144,10 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty; // Чтобы Swagger UI был доступен по корневому URL
     });
     
-    app.UseDeveloperExceptionPage();
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
 }
 
 app.UseHttpsRedirection();

@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+    networks:
+      - mafia-network
+    restart: always
+
+  api:
+    build:
+      context: .
+      dockerfile: Mafia.API/Dockerfile
+      args:
+        - BUILD_CONFIGURATION=Release
+    expose:
+      - "8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - EnableSwagger=true
+      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=5432;Host=postgres;Port=5432;Database=MafiaDB;Include Error Detail=true;
+    restart: always
+    networks:
+      - mafia-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=5432
+      - POSTGRES_DB=MafiaDB
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - mafia-network
+
+networks:
+  mafia-network:
+    driver: bridge 
+
+volumes:
+  postgres-data:
