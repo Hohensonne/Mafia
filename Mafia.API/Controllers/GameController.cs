@@ -11,11 +11,11 @@ namespace Mafia.API.Controllers
 {
     [ApiController]
     [Route("games")]
-    public class GameConroller : ControllerBase
+    public class GameController : ControllerBase
     {
         private readonly IGameService _gameService;
 
-        public GameConroller(IGameService gameService)
+        public GameController(IGameService gameService)
         {
             _gameService = gameService;
         }

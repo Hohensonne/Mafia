@@ -1,53 +1,58 @@
-version: '3.8'
+version: '3.8' # Версия формата Docker Compose
 
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx:latest
     ports:
       - "80:80"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro # Монтируем конфиг Nginx из локальной папки (ro - только чтение)
+      - wwwroot:/wwwroot # Монтируем том wwwroot для хранения статических файлов
     depends_on:
-      - api
-    networks:
-      - mafia-network
-    restart: always
+      - api # Nginx запускается после API-сервиса
+    restart: always # Автоматический перезапуск контейнера при сбоях
 
+
+  # Сервис API - основное приложение ASP.NET Core
   api:
     build:
-      context: .
-      dockerfile: Mafia.API/Dockerfile
+      context: . # Контекст сборки - текущий каталог
+      dockerfile: Mafia.API/Dockerfile # Путь к Dockerfile
       args:
-        - BUILD_CONFIGURATION=Release
+        - BUILD_CONFIGURATION=Development # Аргумент сборки - использовать Development-конфигурацию
     expose:
-      - "8080"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - EnableSwagger=true
-      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=5432;Host=postgres;Port=5432;Database=MafiaDB;Include Error Detail=true;
-    restart: always
-    networks:
-      - mafia-network
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
-  postgres:
-    image: postgres:latest
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=5432
-      - POSTGRES_DB=MafiaDB
-    ports:
-      - "5432:5432"
-    restart: always
+      - "8080" # Экспортируем порт 8080 (только внутри Docker-сети)
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-    networks:
-      - mafia-network
+      - wwwroot:/app/wwwroot # Монтируем том wwwroot для хранения статических файлов
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development # Устанавливаем окружение Development
+      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=5432;Host=postgres;Port=5432;Database=MafiaDB;Include Error Detail=true; # Строка подключения к PostgreSQL
+    watch:
+      - action: rebuild
+        path: ./Mafia.API
+        path: ./Mafia.Persistence
+        path: ./Mafia.Application
+        path: ./Mafia.Infrastructure
+        path: ./Mafia.Core
+    restart: always # Автоматический перезапуск контейнера при сбоях
 
-networks:
-  mafia-network:
-    driver: bridge 
 
+  # Сервис PostgreSQL - база данных
+  postgres:
+    image: postgres:latest # Используем последнюю версию официального образа PostgreSQL
+    environment:
+      - POSTGRES_USER=postgres # Имя пользователя БД
+      - POSTGRES_PASSWORD=5432 # Пароль пользователя БД
+      - POSTGRES_DB=MafiaDB # Имя базы данных
+    ports:
+      - "5432:5432" # Маппинг портов: 5432 порт хоста -> 5432 порт контейнера
+    restart: always # Автоматический перезапуск контейнера при сбоях
+    volumes:
+      - postgres-data:/var/lib/postgresql/data # Монтируем том для хранения данных PostgreSQL
+
+
+
+# Описание томов Docker 
 volumes:
-  postgres-data:
+  postgres-data: # Том для хранения данных PostgreSQL
+  wwwroot: # Том для хранения статических файлов (изображений и т.д.)

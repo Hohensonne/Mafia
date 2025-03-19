@@ -127,15 +127,13 @@ builder.Services.AddAuthentication(options =>
     
 });
 
-builder.Services.AddDirectoryBrowser();
+builder.Services.AddDirectoryBrowser(); //для myimages. потом отключить ОПАСНО!!!!
 
 
 var app = builder.Build();
 
-// Проверяем переменную окружения для Swagger
-var enableSwagger = builder.Configuration.GetValue<bool>("EnableSwagger", false);
 
-if (app.Environment.IsDevelopment() || enableSwagger)
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
@@ -143,57 +141,12 @@ if (app.Environment.IsDevelopment() || enableSwagger)
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mafia API v1");
         c.RoutePrefix = string.Empty; // Чтобы Swagger UI был доступен по корневому URL
     });
-    
-    if (app.Environment.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-    }
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
 
-Console.WriteLine($"WebRootPath: {builder.Environment.WebRootPath}");
-
-// Если WebRootPath равен null, установим его вручную
-if (string.IsNullOrEmpty(builder.Environment.WebRootPath))
-{
-    // Получаем путь к текущей директории приложения
-    string contentRoot = builder.Environment.ContentRootPath;
-    string webRootPath = Path.Combine(contentRoot, "wwwroot");
-    
-    // Устанавливаем WebRootPath
-    builder.Environment.WebRootPath = webRootPath;
-    
-    Console.WriteLine($"WebRootPath установлен вручную: {builder.Environment.WebRootPath}");
-}
-
-if (!Directory.Exists(builder.Environment.WebRootPath))
-{
-    Directory.CreateDirectory(builder.Environment.WebRootPath);
-}
-
-var imagesPath = Path.Combine(builder.Environment.WebRootPath, "images");
-if (!Directory.Exists(imagesPath))
-{
-    Directory.CreateDirectory(imagesPath);
-}
-
-var fileProvider = new PhysicalFileProvider(imagesPath);
-var requestPath = "/MyImages";
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = fileProvider,
-    RequestPath = requestPath
-});
-
-app.UseDirectoryBrowser(new DirectoryBrowserOptions
-{
-    FileProvider = fileProvider,
-    RequestPath = requestPath
-});
 
 app.UseAuthentication();
 app.UseAuthorization();
