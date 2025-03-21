@@ -39,7 +39,7 @@ namespace Mafia.Application.Services
         }
 
 
-        public async Task Register(string userName, string email, string password, IFormFile profileImage)
+        public async Task Register(string FirstName, string LastName, string email, string password, IFormFile profileImage)
         {
 
             var userId = Guid.NewGuid().ToString();
@@ -50,7 +50,8 @@ namespace Mafia.Application.Services
             }
             var user = new User { 
                 Id = userId,
-                UserName = userName,
+                FirstName = FirstName,
+                LastName = LastName,
                 Email = email,
                 RegistrationDate = DateTime.UtcNow,
                 ProfileImageUrl = imageUrl
@@ -106,9 +107,9 @@ namespace Mafia.Application.Services
             return (JwtToken, RefreshToken);
         }
 
-        public async Task Update(string id, string userName, string email, string password)
+        public async Task Update(string id, string firstName, string lastName, string email, string password)
         {            
-            var result = await _repository.Update(id, userName, email, password);
+            var result = await _repository.Update(id, firstName, lastName, email, password);
             if (!result.Succeeded)
             {
                 var errors = string.Join(", ", result.Errors.Select(e => e.Description));

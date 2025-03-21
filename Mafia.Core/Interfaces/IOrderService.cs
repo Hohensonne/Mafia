@@ -17,7 +17,7 @@ namespace Mafia.Core.Interfaces
         Task<IEnumerable<Order>> GetUserOrdersAsync(string userId);
         Task<Order?> GetOrderByIdAsync(string id);
         Task<Order?> GetOrderWithDetailsAsync(string id);
-        Task<string> CreateOrderFromCartAsync(string userId);
+        Task<string> CreateOrderFromCartAsync(string userId, string address, PaymenthMethod paymentMethod);
         Task UpdateOrderStatusAsync(string orderId, string status);
         Task CancelOrderAsync(string orderId);
         Task CancelOrderAsync(string orderId, string userId);

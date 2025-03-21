@@ -64,7 +64,7 @@
     "/games/get-all": {
       "get": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "responses": {
           "200": {
@@ -76,7 +76,7 @@
     "/games/get-upcoming": {
       "get": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "responses": {
           "200": {
@@ -88,7 +88,7 @@
     "/games/get/{id}": {
       "get": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "parameters": [
           {
@@ -110,7 +110,7 @@
     "/games/get-registered": {
       "get": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "responses": {
           "200": {
@@ -122,7 +122,7 @@
     "/games/create": {
       "post": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "requestBody": {
           "content": {
@@ -153,7 +153,7 @@
     "/games/delete/{id}": {
       "delete": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "parameters": [
           {
@@ -175,7 +175,7 @@
     "/games/register/{gameId}": {
       "post": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "parameters": [
           {
@@ -197,7 +197,7 @@
     "/games/cancel-registration/{gameId}": {
       "delete": {
         "tags": [
-          "GameConroller"
+          "Game"
         ],
         "parameters": [
           {
@@ -789,7 +789,10 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "UserName": {
+                  "FirstName": {
+                    "type": "string"
+                  },
+                  "LastName": {
                     "type": "string"
                   },
                   "Email": {
@@ -805,7 +808,10 @@
                 }
               },
               "encoding": {
-                "UserName": {
+                "FirstName": {
+                  "style": "form"
+                },
+                "LastName": {
                   "style": "form"
                 },
                 "Email": {

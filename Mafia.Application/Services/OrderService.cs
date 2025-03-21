@@ -42,7 +42,7 @@ namespace Mafia.Application.Services
             return await _orderRepository.GetByIdWithDetailsAsync(id);
         }
 
-        public async Task<string> CreateOrderFromCartAsync(string userId)
+        public async Task<string> CreateOrderFromCartAsync(string userId, string address, PaymenthMethod paymentMethod)
         {
             var cartItems = await _cartRepository.GetAllByUserIdAsync(userId);
             if (!cartItems.Any())
@@ -64,7 +64,9 @@ namespace Mafia.Application.Services
                 Id = Guid.NewGuid().ToString(),
                 UserId = userId,
                 OrderDate = DateTime.UtcNow,
-                Status = OrderStatusEnum.Created
+                Status = OrderStatusEnum.Created,
+                Address = address,
+                PaymentMethod = paymentMethod
             };
 
             await _orderRepository.CreateAsync(order);

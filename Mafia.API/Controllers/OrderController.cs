@@ -5,6 +5,8 @@ using Mafia.Core.Models;
 using Mafia.Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Mafia.API.Contracts;
+
 namespace Mafia.API.Controllers
 {
     [ApiController]
@@ -39,12 +41,12 @@ namespace Mafia.API.Controllers
 
         [HttpPost("create")]
         [Authorize]
-        public async Task<IActionResult> CreateOrder()
+        public async Task<IActionResult> CreateOrder([FromBody] CreateOrderRequest request)
         {
             try
             {
                 var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                var orderId = await _orderService.CreateOrderFromCartAsync(userId);
+                var orderId = await _orderService.CreateOrderFromCartAsync(userId, request.Address, request.PaymentMethod);
                 return Ok(orderId);
             }
             catch (Exception ex)

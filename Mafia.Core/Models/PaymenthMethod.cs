@@ -1,6 +1,6 @@
 namespace Mafia.Core.Models;
 
-public enum PaymentMethodEnum
+public enum PaymenthMethod
 {
     Cash,
     Card

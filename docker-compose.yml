@@ -7,7 +7,6 @@ services:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro # Монтируем конфиг Nginx из локальной папки (ro - только чтение)
-      - wwwroot:/wwwroot # Монтируем том wwwroot для хранения статических файлов
     depends_on:
       - api # Nginx запускается после API-сервиса
     restart: always # Автоматический перезапуск контейнера при сбоях
@@ -27,13 +26,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development # Устанавливаем окружение Development
       - ConnectionStrings__DefaultConnection=User ID=postgres;Password=5432;Host=postgres;Port=5432;Database=MafiaDB;Include Error Detail=true; # Строка подключения к PostgreSQL
-    watch:
-      - action: rebuild
-        path: ./Mafia.API
-        path: ./Mafia.Persistence
-        path: ./Mafia.Application
-        path: ./Mafia.Infrastructure
-        path: ./Mafia.Core
     restart: always # Автоматический перезапуск контейнера при сбоях
 
 

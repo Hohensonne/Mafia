@@ -40,6 +40,9 @@ builder.Services.AddTransient<IGameRepository, GameRepository>();
 builder.Services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 
+builder.Services.AddScoped<IUserValidator<User>, CustomUserValidator>();
+builder.Services.AddScoped<IUserClaimsPrincipalFactory<User>, CustomClaimsPrincipalFactory>();
+
 builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen(c =>
@@ -131,7 +134,7 @@ builder.Services.AddDirectoryBrowser(); //для myimages. потом отклю
 
 
 var app = builder.Build();
-
+app.UseStaticFiles();
 
 if (app.Environment.IsDevelopment())
 {

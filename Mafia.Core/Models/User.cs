@@ -4,6 +4,8 @@ namespace Mafia.Core.Models
 {
     public class User : IdentityUser
     {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         public string? ProfileImageUrl { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public string? RefreshToken { get; set; }

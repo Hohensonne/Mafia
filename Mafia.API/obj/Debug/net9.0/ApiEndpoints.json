@@ -36,7 +36,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "CancelRegistration",
     "RelativePath": "games/cancel-registration/{gameId}",
     "HttpMethod": "DELETE",
@@ -52,7 +52,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "CreateGame",
     "RelativePath": "games/create",
     "HttpMethod": "POST",
@@ -68,7 +68,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "DeleteGame",
     "RelativePath": "games/delete/{id}",
     "HttpMethod": "DELETE",
@@ -84,7 +84,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "GetAllGames",
     "RelativePath": "games/get-all",
     "HttpMethod": "GET",
@@ -94,7 +94,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "GetRegisteredGames",
     "RelativePath": "games/get-registered",
     "HttpMethod": "GET",
@@ -104,7 +104,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "GetUpcomingGames",
     "RelativePath": "games/get-upcoming",
     "HttpMethod": "GET",
@@ -114,7 +114,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "GetGameById",
     "RelativePath": "games/get/{id}",
     "HttpMethod": "GET",
@@ -130,7 +130,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Mafia.API.Controllers.GameConroller",
+    "ContainingType": "Mafia.API.Controllers.GameController",
     "Method": "RegisterUserForGame",
     "RelativePath": "games/register/{gameId}",
     "HttpMethod": "POST",
@@ -503,7 +503,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserName",
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
         "Type": "System.String",
         "IsRequired": false
       },

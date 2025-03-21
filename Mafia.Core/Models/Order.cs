@@ -11,4 +11,6 @@ public class Order
     public double TotalAmount { get; set; }
     public OrderStatusEnum Status { get; set; }
     public ICollection<OrderDetail> OrderDetails { get; set; }
+    public string Address { get; set; }
+    public PaymenthMethod PaymentMethod { get; set; }
 }

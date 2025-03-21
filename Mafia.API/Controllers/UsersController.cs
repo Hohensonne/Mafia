@@ -30,7 +30,7 @@ namespace Mafia.API.Controllers
             {
                 var email = User.FindFirst(ClaimTypes.Email)?.Value;
                 var user = await _usersService.GetByEmail(email);
-                return Ok(new GetUserResponse(user.Id, user.UserName, user.Email, user.ProfileImageUrl));
+                return Ok(new GetUserResponse(user.Id, user.FirstName, user.LastName, user.Email, user.ProfileImageUrl));
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace Mafia.API.Controllers
         {
             try 
             {
-                await _usersService.Register(request.UserName, request.Email, request.Password, request.ProfileImage);
+                await _usersService.Register(request.FirstName, request.LastName, request.Email, request.Password, request.ProfileImage);
                 return Ok();
             }
             catch (Exception ex)
