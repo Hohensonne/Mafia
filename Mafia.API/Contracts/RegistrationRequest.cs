@@ -8,5 +8,6 @@ namespace Mafia.API.Contracts
         [Required] string LastName, 
         [Required] string Email, 
         [Required] string Password, 
+        [Required] string PhoneNumber,
         IFormFile? ProfileImage);
 }

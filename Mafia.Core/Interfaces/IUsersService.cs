@@ -8,8 +8,8 @@ namespace Mafia.Core.Interfaces
         Task<User> GetByEmail(string email);
         Task DeleteByEmail(string email);
         Task<(string jwtToken, string refreshToken)> Login(string email, string password);
-        Task Register(string firstName, string lastName, string email, string password, IFormFile profileImage);
-        Task Update(string id, string firstName, string lastName, string email, string password);
+        Task Register(string firstName, string lastName, string email, string phoneNumber, string password, IFormFile profileImage);
+        Task Update(string id, string firstName, string lastName, string email, string phoneNumber, string password);
         Task UpdateProfileImage(string email, IFormFile profileImage);
         Task<(string jwtToken, string refreshToken)> RefreshTokenAsync(string refreshToken);
         Task<IEnumerable<User>> GetAll();

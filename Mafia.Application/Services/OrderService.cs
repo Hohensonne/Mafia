@@ -9,17 +9,20 @@ namespace Mafia.Application.Services
         private readonly ICartRepository _cartRepository;
         private readonly IProductRepository _productRepository;
         private readonly IOrderDetailRepository _orderDetailRepository;
+        private readonly IExcelService _excelService;
 
         public OrderService(
             IOrderRepository orderRepository,
             ICartRepository cartRepository,
             IProductRepository productRepository,
-            IOrderDetailRepository orderDetailRepository)
+            IOrderDetailRepository orderDetailRepository,
+            IExcelService excelService)
         {
             _orderRepository = orderRepository;
             _cartRepository = cartRepository;
             _productRepository = productRepository;
             _orderDetailRepository = orderDetailRepository;
+            _excelService = excelService;
         }
 
         public async Task<IEnumerable<Order>> GetAllOrdersAsync()
@@ -102,7 +105,7 @@ namespace Mafia.Application.Services
 
         public async Task UpdateOrderStatusAsync(string orderId, string status)
         {
-            var order = await _orderRepository.GetByIdAsync(orderId);
+            var order = await _orderRepository.GetByIdWithDetailsAsync(orderId);
             if (order == null)
             {
                 throw new InvalidOperationException("order not found");
@@ -114,7 +117,23 @@ namespace Mafia.Application.Services
                 await CancelOrderAsync(orderId);
                 return;
             }
+
             await _orderRepository.UpdateAsync(order);
+
+            // Если заказ доставлен, записываем его в Excel
+            if (order.Status == OrderStatusEnum.Delivered)
+            {
+                try
+                {
+                    await _excelService.SaveDeliveredOrderToExcelAsync(order);
+                }
+                catch (Exception ex)
+                {
+                    // Логируем ошибку, но не прерываем выполнение основной операции
+                    // TODO: добавить логирование
+                    Console.WriteLine($"Error saving order to Excel: {ex.Message}");
+                }
+            }
         }
 
         public async Task CancelOrderAsync(string orderId, string userId)

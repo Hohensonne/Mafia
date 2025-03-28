@@ -35,15 +35,21 @@ namespace Mafia.Persistence.Repositories
             return await _userManager.CreateAsync(user, password);
         }
 
-        public async Task<IdentityResult> Update(string id, string firstName, string lastName, string email, string password)
+        public async Task<IdentityResult> Update(string id, string firstName, string lastName, string email, string phoneNumber, string password)
         {
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)
                 return IdentityResult.Failed();
-            user.FirstName = firstName;
-            user.LastName = lastName;
-            user.Email = email;
-            user.PasswordHash = new PasswordHasher<User>().HashPassword(user, password);
+            if (firstName != null)
+                user.FirstName = firstName;
+            if (lastName != null)
+                user.LastName = lastName;
+            if (email != null)
+                user.Email = email;
+            if (phoneNumber != null)
+                user.PhoneNumber = phoneNumber;
+            if (password != null)
+                user.PasswordHash = new PasswordHasher<User>().HashPassword(user, password);
             return await _userManager.UpdateAsync(user);
         }
 

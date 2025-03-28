@@ -11,6 +11,7 @@ using Mafia.Core.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication;
+using System.Text.RegularExpressions;
 
 namespace Mafia.Application.Services
 {
@@ -39,8 +40,10 @@ namespace Mafia.Application.Services
         }
 
 
-        public async Task Register(string FirstName, string LastName, string email, string password, IFormFile profileImage)
+        public async Task Register(string FirstName, string LastName, string email, string phoneNumber, string password, IFormFile profileImage)
         {
+            if (!Regex.IsMatch(password, @"^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"))
+                throw new AuthenticationFailureException("invalid phone number");
 
             var userId = Guid.NewGuid().ToString();
             string imageUrl = "";
@@ -53,6 +56,7 @@ namespace Mafia.Application.Services
                 FirstName = FirstName,
                 LastName = LastName,
                 Email = email,
+                PhoneNumber = phoneNumber,
                 RegistrationDate = DateTime.UtcNow,
                 ProfileImageUrl = imageUrl
             };
@@ -107,9 +111,12 @@ namespace Mafia.Application.Services
             return (JwtToken, RefreshToken);
         }
 
-        public async Task Update(string id, string firstName, string lastName, string email, string password)
+        public async Task Update(string id, string firstName, string lastName, string email, string phoneNumber, string password)
         {            
-            var result = await _repository.Update(id, firstName, lastName, email, password);
+            if (phoneNumber != null && !Regex.IsMatch(phoneNumber, @"^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"))
+                throw new AuthenticationFailureException("invalid phone number");
+
+            var result = await _repository.Update(id, firstName, lastName, email, phoneNumber, password);
             if (!result.Succeeded)
             {
                 var errors = string.Join(", ", result.Errors.Select(e => e.Description));

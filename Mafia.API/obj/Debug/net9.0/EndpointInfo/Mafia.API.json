@@ -233,6 +233,25 @@
         "tags": [
           "Order"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -801,6 +820,9 @@
                   "Password": {
                     "type": "string"
                   },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
                   "ProfileImage": {
                     "type": "string",
                     "format": "binary"
@@ -820,7 +842,65 @@
                 "Password": {
                   "style": "form"
                 },
+                "PhoneNumber": {
+                  "style": "form"
+                },
                 "ProfileImage": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/update": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "FirstName": {
+                    "type": "string"
+                  },
+                  "LastName": {
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string"
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "FirstName": {
+                  "style": "form"
+                },
+                "LastName": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "Password": {
                   "style": "form"
                 }
               }
@@ -931,6 +1011,19 @@
   },
   "components": {
     "schemas": {
+      "CreateOrderRequest": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentMethod": {
+            "$ref": "#/components/schemas/PaymenthMethod"
+          }
+        },
+        "additionalProperties": false
+      },
       "GameCreationRequest": {
         "type": "object",
         "properties": {
@@ -966,6 +1059,14 @@
           }
         },
         "additionalProperties": false
+      },
+      "PaymenthMethod": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "RefreshTokenRequest": {
         "type": "object",

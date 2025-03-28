@@ -30,7 +30,7 @@ namespace Mafia.API.Controllers
             {
                 var email = User.FindFirst(ClaimTypes.Email)?.Value;
                 var user = await _usersService.GetByEmail(email);
-                return Ok(new GetUserResponse(user.Id, user.FirstName, user.LastName, user.Email, user.ProfileImageUrl));
+                return Ok(new GetUserResponse(user.Id, user.FirstName, user.LastName, user.Email, user.PhoneNumber, user.ProfileImageUrl));
             }
             catch (Exception ex)
             {
@@ -52,7 +52,23 @@ namespace Mafia.API.Controllers
         {
             try 
             {
-                await _usersService.Register(request.FirstName, request.LastName, request.Email, request.Password, request.ProfileImage);
+                await _usersService.Register(request.FirstName, request.LastName, request.Email, request.PhoneNumber, request.Password, request.ProfileImage);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("update")]
+        [Authorize]
+        public async Task<IActionResult> Update([FromForm] UpdateUserRequest request)
+        {
+            try
+            {
+                var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                await _usersService.Update(id, request.FirstName, request.LastName, request.Email, request.PhoneNumber, request.Password);
                 return Ok();
             }
             catch (Exception ex)

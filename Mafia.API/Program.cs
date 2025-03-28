@@ -28,7 +28,7 @@ builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddScoped<IGameRegistrationService, GameRegistrationService>();
 builder.Services.AddScoped<IGameService, GameService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-
+builder.Services.AddScoped<IExcelService, ExcelService>();
 
 builder.Services.AddTransient<IUsersRepository, UsersRepository>();
 builder.Services.AddTransient<IFileRepository, FileRepository>();
@@ -132,6 +132,15 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddDirectoryBrowser(); //для myimages. потом отключить ОПАСНО!!!!
 
+// Добавляем настройки CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        policy => policy
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowAnyOrigin());
+});
 
 var app = builder.Build();
 app.UseStaticFiles();
@@ -149,7 +158,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
+// Подключаем CORS middleware
+app.UseCors("AllowSpecificOrigins");
 
 app.UseAuthentication();
 app.UseAuthorization();
