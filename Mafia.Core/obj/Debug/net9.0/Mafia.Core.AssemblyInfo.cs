@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3abeafe81f7028f6319421db203c0d45a8bfe533")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e1dfb9a51c9ceda12b50a03fb6f7ca4f11770e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

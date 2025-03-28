@@ -42,7 +42,7 @@ namespace Mafia.Application.Services
 
         public async Task Register(string FirstName, string LastName, string email, string phoneNumber, string password, IFormFile profileImage)
         {
-            if (!Regex.IsMatch(password, @"^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"))
+                if (!Regex.IsMatch(phoneNumber, @"^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"))
                 throw new AuthenticationFailureException("invalid phone number");
 
             var userId = Guid.NewGuid().ToString();
