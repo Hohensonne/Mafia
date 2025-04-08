@@ -10,6 +10,8 @@ services:
     depends_on:
       - api # Nginx запускается после API-сервиса
     restart: always # Автоматический перезапуск контейнера при сбоях
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Позволяет обращаться к хосту из контейнера
 
 
   # Сервис API - основное приложение ASP.NET Core

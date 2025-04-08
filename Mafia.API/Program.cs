@@ -15,7 +15,6 @@ using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.StaticFiles;
-using Mafia.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
