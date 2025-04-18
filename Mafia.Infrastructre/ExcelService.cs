@@ -1,11 +1,8 @@
 using Mafia.Core.Interfaces;
 using Mafia.Core.Models;
 using OfficeOpenXml;
-using System;
-using System.IO;
-using System.Threading.Tasks;
 
-namespace Mafia.Application.Services
+namespace Mafia.Infrastructre
 {
     public class ExcelService : IExcelService
     {
@@ -28,7 +25,7 @@ namespace Mafia.Application.Services
             _excelFilePath = Path.Combine(_excelFolderPath, "DeliveredOrders.xlsx");
         }
 
-        public async Task SaveDeliveredOrderToExcelAsync(Order order)
+        public async Task SaveDeliveredOrderToExcel(Order order)
         {
             if (order == null)
             {
@@ -40,7 +37,6 @@ namespace Mafia.Application.Services
                 throw new InvalidOperationException("Only delivered orders can be saved to Excel");
             }
 
-            // Проверяем, существует ли файл, если нет - создаем его
             FileInfo fileInfo = new FileInfo(_excelFilePath);
             
             using (var package = new ExcelPackage(fileInfo))

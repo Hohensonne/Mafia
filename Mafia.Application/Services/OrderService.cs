@@ -125,7 +125,7 @@ namespace Mafia.Application.Services
             {
                 try
                 {
-                    await _excelService.SaveDeliveredOrderToExcelAsync(order);
+                    await _excelService.SaveDeliveredOrderToExcel(order);
                 }
                 catch (Exception ex)
                 {

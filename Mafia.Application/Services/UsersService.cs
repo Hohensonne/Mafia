@@ -21,6 +21,7 @@ namespace Mafia.Application.Services
         private readonly IJwtTokenProvider _jwtTokenProvider;
         private readonly UserManager<User> _userManager;
         private readonly IFileRepository _fileRepository;
+
         public UsersService(IUsersRepository repository, IJwtTokenProvider jwtTokenProvider, UserManager<User> userManager, IFileRepository fileRepository)
         {
             _repository = repository;

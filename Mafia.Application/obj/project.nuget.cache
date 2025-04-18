@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "UgbDHk8Oz0w=",
-  "success": true,
+  "dgSpecHash": "GYpLs89h4AE=",
+  "success": false,
   "projectFilePath": "D:\\Программирование\\Mafia\\Mafia.Application\\Mafia.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danii\\.nuget\\packages\\epplus\\7.7.0\\epplus.7.7.0.nupkg.sha512",
@@ -65,5 +65,15 @@
     "C:\\Users\\danii\\.nuget\\packages\\system.text.encoding.codepages\\9.0.3\\system.text.encoding.codepages.9.0.3.nupkg.sha512",
     "C:\\Users\\danii\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета EPPlus с 8.0.2 на 7.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Mafia.Application -> Mafia.Infrastructre -> EPPlus (>= 8.0.2) \r\n Mafia.Application -> EPPlus (>= 7.7.0)",
+      "libraryId": "EPPlus",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

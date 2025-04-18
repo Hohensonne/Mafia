@@ -69,6 +69,9 @@ public class FileRepository : IFileRepository
 
     private async Task<string> SaveImage(string folder, string Id, IFormFile file)
     {
+        if (!file.ContentType.StartsWith("image/"))
+            throw new ArgumentException("File is not an image");
+
         string fileName = $"{Id}_{DateTime.Now.Ticks}{Path.GetExtension(file.FileName)}";
         string filePath = Path.Combine(_basePath, folder, fileName);
         
@@ -96,5 +99,4 @@ public class FileRepository : IFileRepository
         return Task.CompletedTask;
         
     }
-
 }

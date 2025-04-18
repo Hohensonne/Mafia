@@ -1921,6 +1921,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "EPPlus": "8.0.2",
           "Mafia.Core": "1.0.0",
           "Microsoft.AspNetCore.Hosting": "2.3.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.3.0",
@@ -5545,7 +5546,6 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "EPPlus >= 7.7.0",
       "Mafia.Application >= 1.0.0",
       "Mafia.Core >= 1.0.0",
       "Mafia.Persistence >= 1.0.0",
@@ -5618,10 +5618,6 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "EPPlus": {
-            "target": "Package",
-            "version": "[7.7.0, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[9.0.2, )"
@@ -5675,5 +5671,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета EPPlus с 8.0.2 на 7.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Mafia.API -> Mafia.Application -> Mafia.Infrastructre -> EPPlus (>= 8.0.2) \r\n Mafia.API -> Mafia.Application -> EPPlus (>= 7.7.0)",
+      "libraryId": "EPPlus",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

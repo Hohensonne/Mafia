@@ -4,6 +4,6 @@ namespace Mafia.Core.Interfaces
 {
     public interface IExcelService
     {
-        Task SaveDeliveredOrderToExcelAsync(Order order);
+        Task SaveDeliveredOrderToExcel(Order order);
     }
 } 

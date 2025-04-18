@@ -60,10 +60,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "EPPlus": {
-              "target": "Package",
-              "version": "[7.7.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -324,6 +320,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.3.0, )"

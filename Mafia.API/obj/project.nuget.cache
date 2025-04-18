@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "6zr30BfuN3s=",
-  "success": true,
+  "dgSpecHash": "Hy/YFJwaN8Y=",
+  "success": false,
   "projectFilePath": "D:\\Программирование\\Mafia\\Mafia.API\\Mafia.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danii\\.nuget\\packages\\epplus\\7.7.0\\epplus.7.7.0.nupkg.sha512",
@@ -102,5 +102,15 @@
     "C:\\Users\\danii\\.nuget\\packages\\system.text.json\\9.0.2\\system.text.json.9.0.2.nupkg.sha512",
     "C:\\Users\\danii\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Предупреждение как ошибка: Обнаружено понижение версии пакета EPPlus с 8.0.2 на 7.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Mafia.API -> Mafia.Application -> Mafia.Infrastructre -> EPPlus (>= 8.0.2) \r\n Mafia.API -> Mafia.Application -> EPPlus (>= 7.7.0)",
+      "libraryId": "EPPlus",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }
