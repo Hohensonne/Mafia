@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03466fa5a2da45f4e7b13377527bd6992fffd980")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8d7eff7449269a35412ca7bb74b9c53daf55cdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

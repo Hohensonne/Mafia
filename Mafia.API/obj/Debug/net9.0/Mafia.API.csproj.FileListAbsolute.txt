@@ -287,10 +287,8 @@ D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.s
 I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.dll
 I:\Mafia\Mafia.API\obj\Debug\net9.0\refint\Mafia.API.dll
 I:\Mafia\Mafia.API\obj\Debug\net9.0\Mafia.API.pdb
-D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\compressed\iwqwj0ronf-yu78tspv7y.gz
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\EPPlus.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\EPPlus.Interfaces.dll
-D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\EPPlus.System.Drawing.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
@@ -300,12 +298,8 @@ D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.E
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.IO.RecyclableMemoryStream.dll
-D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
-D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\System.Drawing.Common.dll
-D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\System.Private.Windows.Core.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\System.Text.Encoding.CodePages.dll
-D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encoding.CodePages.dll
-D:\Программирование\Mafia\Mafia.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\Программирование\Mafia\Mafia.API\bin\Debug\net9.0\System.Security.Cryptography.Xml.dll
