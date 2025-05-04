@@ -21,13 +21,18 @@ services:
       dockerfile: Mafia.API/Dockerfile # Путь к Dockerfile
       args:
         - BUILD_CONFIGURATION=Development # Аргумент сборки - использовать Development-конфигурацию
-    expose:
-      - "8080" # Экспортируем порт 8080 (только внутри Docker-сети)
+    ports:
+      - "8080:8080"
     volumes:
       - wwwroot:/app/wwwroot # Монтируем том wwwroot для хранения статических файлов
     environment:
       - ASPNETCORE_ENVIRONMENT=Development # Устанавливаем окружение Development
       - ConnectionStrings__DefaultConnection=User ID=postgres;Password=5432;Host=postgres;Port=5432;Database=MafiaDB;Include Error Detail=true; # Строка подключения к PostgreSQL
+    env_file:
+      - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
     restart: always # Автоматический перезапуск контейнера при сбоях
 
 

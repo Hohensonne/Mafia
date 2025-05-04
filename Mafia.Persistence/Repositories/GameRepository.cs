@@ -25,7 +25,7 @@ namespace Mafia.Persistence.Repositories
         {
             var now = DateTime.UtcNow;
             return await _context.Games
-                .Where(g => g.StartTime > now && g.EndOfRegistration > now)
+                .Where(g => g.StartTime > now)
                 .OrderBy(g => g.StartTime)
                 .ToListAsync();
         }

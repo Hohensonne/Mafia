@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.persistence\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|solutionrelative:mafia.persistence\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.persistence\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDF07958-3D2D-4618-94D4-C205EF688C74}|Mafia.Persistence\\Mafia.Persistence.csproj|solutionrelative:mafia.persistence\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4223775C-8AD7-4460-9296-858DCEB48625}|Mafia.API\\Mafia.API.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\mafia\\mafia.api\\mafia.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4223775C-8AD7-4460-9296-858DCEB48625}|Mafia.API\\Mafia.API.csproj|solutionrelative:mafia.api\\mafia.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -37,12 +45,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Mafia.API",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Mafia.Persistence\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Mafia.Persistence\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T22:00:40.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "Mafia.Persistence\\Repositories\\UsersRepository.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Persistence\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "Mafia.Persistence\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T21:56:40.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mafia.API.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Mafia.API.csproj",
               "RelativeDocumentMoniker": "Mafia.API\\Mafia.API.csproj",
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Mafia.API.csproj",
@@ -54,18 +92,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\danii\\.nuget\\packages\\epplus\\8.0.2\\readme.txt",
               "ToolTip": "C:\\Users\\danii\\.nuget\\packages\\epplus\\8.0.2\\readme.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-18T00:59:47.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T00:59:47.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ExcelService.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\ExcelService.cs",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\ExcelService.cs",
@@ -73,29 +110,24 @@
               "RelativeToolTip": "Mafia.Infrastructre\\ExcelService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T00:54:09.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T00:54:09.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mafia.Infrastructre",
+              "DocumentIndex": 4,
+              "Title": "Mafia.Infrastructre.csproj",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj*",
-              "RelativeToolTip": "Mafia.Infrastructre\\Mafia.Infrastructre.csproj*",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
+              "RelativeToolTip": "Mafia.Infrastructre\\Mafia.Infrastructre.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-04-18T00:52:50.248Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "FileRepository.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.Infrastructre\\FileRepository.cs",
               "RelativeDocumentMoniker": "Mafia.Infrastructre\\FileRepository.cs",
@@ -103,12 +135,11 @@
               "RelativeToolTip": "Mafia.Infrastructre\\FileRepository.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAwwCYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:52:15.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:52:15.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\appsettings.json",
               "RelativeDocumentMoniker": "Mafia.API\\appsettings.json",
@@ -116,12 +147,11 @@
               "RelativeToolTip": "Mafia.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-19T13:53:37.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T13:53:37.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\Mafia\\Mafia.API\\Program.cs",
               "RelativeDocumentMoniker": "Mafia.API\\Program.cs",
@@ -129,8 +159,7 @@
               "RelativeToolTip": "Mafia.API\\Program.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAtwGMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T22:36:12.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T22:36:12.797Z"
             }
           ]
         }

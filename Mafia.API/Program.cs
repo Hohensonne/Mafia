@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.AspNetCore.StaticFiles;
-
+using Mafia.API;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IJwtTokenProvider, JwtTokenProvider>();
@@ -176,9 +176,22 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<ApplicationDbContext>();
         context.Database.Migrate();
         
+        
         // Создаем администратора, если его нет
         var userManager = services.GetRequiredService<UserManager<User>>();
-        var adminEmail = "admin@123.com";
+        var adminEmail = Environment.GetEnvironmentVariable("ADMIN_EMAIL") ?? "admin@example.com";
+        var adminPassword = Environment.GetEnvironmentVariable("ADMIN_PASSWORD") ?? "Admin123!";
+        
+        // В лог добавляем информацию об использовании значений по умолчанию
+        if (Environment.GetEnvironmentVariable("ADMIN_EMAIL") == null)
+        {
+            Console.WriteLine("Переменная окружения ADMIN_EMAIL не установлена. Используется значение по умолчанию.");
+        }
+
+        if (Environment.GetEnvironmentVariable("ADMIN_PASSWORD") == null)
+        {
+            Console.WriteLine("Переменная окружения ADMIN_PASSWORD не установлена. Используется значение по умолчанию.");
+        }
         
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser == null)
@@ -190,7 +203,7 @@ using (var scope = app.Services.CreateScope())
                 EmailConfirmed = true
             };
             
-            var result = await userManager.CreateAsync(adminUser, "Admin123!");
+            var result = await userManager.CreateAsync(adminUser, adminPassword);
             if (result.Succeeded)
             {
                 await userManager.AddToRoleAsync(adminUser, "Admin");
@@ -199,5 +212,5 @@ using (var scope = app.Services.CreateScope())
     
     
 }
-
+app.UseExeptionHandling();
 app.Run();

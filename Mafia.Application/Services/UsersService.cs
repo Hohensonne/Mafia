@@ -93,15 +93,16 @@ namespace Mafia.Application.Services
             //await _userManager.AddToRoleAsync(user, "User");
         }
 
-        public async Task<(string jwtToken, string refreshToken)> Login(string email, string password)
+        public async Task<(string jwtToken, string refreshToken, IEnumerable<string> roles)> Login(string email, string password)
         {
             User? user = await _repository.GetByEmail(email);
 
             if (user == null || !await _userManager.CheckPasswordAsync(user, password))
                 throw new AuthenticationFailureException("invalid username or password") ;
 
+            IEnumerable<string> roles = await _userManager.GetRolesAsync(user);
 
-            var JwtToken = _jwtTokenProvider.GenerateJwtToken(user, _userManager.GetRolesAsync(user).Result);
+            var JwtToken = _jwtTokenProvider.GenerateJwtToken(user, roles.ToList());
             var RefreshToken = _jwtTokenProvider.GenerateRefreshToken();
             
             // Сохраняем refresh token в базу данных
@@ -109,7 +110,7 @@ namespace Mafia.Application.Services
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _jwtTokenProvider.SaveRefreshTokenAsync(user);
             
-            return (JwtToken, RefreshToken);
+            return (JwtToken, RefreshToken, roles);
         }
 
         public async Task Update(string id, string firstName, string lastName, string email, string phoneNumber, string password)
@@ -145,7 +146,7 @@ namespace Mafia.Application.Services
             await _repository.UpdateProfileImage(user.Id, imageUrl);
         }
 
-        public async Task<(string jwtToken, string refreshToken)> RefreshTokenAsync(string refreshToken)
+        public async Task<(string jwtToken, string refreshToken, IEnumerable<string> roles)> RefreshTokenAsync(string refreshToken)
         {
             var user = await _jwtTokenProvider.GetRefreshTokenAsync(refreshToken);
             if (user == null)
@@ -158,15 +159,15 @@ namespace Mafia.Application.Services
                 throw new AuthenticationFailureException("Token expired");
             }
             
-            
-            var newJwtToken = _jwtTokenProvider.GenerateJwtToken(user, _userManager.GetRolesAsync(user).Result);
+            IEnumerable<string> roles = await _userManager.GetRolesAsync(user);
+            var newJwtToken = _jwtTokenProvider.GenerateJwtToken(user, roles);
             var newRefreshToken = _jwtTokenProvider.GenerateRefreshToken();
             
             user.RefreshToken = newRefreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _jwtTokenProvider.SaveRefreshTokenAsync(user);
             
-            return (newJwtToken, newRefreshToken);
+            return (newJwtToken, newRefreshToken, roles);
         }
 
     }

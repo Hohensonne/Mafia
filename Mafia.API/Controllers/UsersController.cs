@@ -83,8 +83,8 @@ namespace Mafia.API.Controllers
         {
             try
             {
-                var (jwtToken, refreshToken) = await _usersService.Login(request.Email, request.Password);
-                return Ok(new LoginResponse(jwtToken, refreshToken));
+                var (jwtToken, refreshToken, roles) = await _usersService.Login(request.Email, request.Password);
+                return Ok(new LoginResponse(jwtToken, refreshToken, roles));
             }
             catch (Exception ex)
             {
@@ -115,8 +115,8 @@ namespace Mafia.API.Controllers
         {
             try
             {
-                (string newJwtToken, string newRefreshToken) = await _usersService.RefreshTokenAsync(request.RefreshToken);
-                return Ok(new LoginResponse(newJwtToken, newRefreshToken));
+                (string newJwtToken, string newRefreshToken, IEnumerable<string> roles) = await _usersService.RefreshTokenAsync(request.RefreshToken);
+                return Ok(new LoginResponse(newJwtToken, newRefreshToken, roles));
             }
             catch (Exception ex)
             {

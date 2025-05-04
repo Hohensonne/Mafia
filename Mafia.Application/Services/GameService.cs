@@ -50,6 +50,8 @@ namespace Mafia.Application.Services
 
         public async Task<string> CreateGameAsync(string name, DateTime startTime, DateTime endOfRegistration, int maxPlayers)
         {
+            if (endOfRegistration > startTime)
+                throw new ArgumentException("End of registration cannot be after start time");
             var game = new Game
             {
                 Id = Guid.NewGuid().ToString(),

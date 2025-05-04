@@ -16,19 +16,47 @@ namespace Mafia.Persistence.Repositories
 
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products.Select(p => new Product
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Price = p.Price,
+                AvailableQuantity = p.AvailableQuantity,
+                Category = p.Category,
+                ImageUrl = p.ImageUrl
+            }).ToListAsync();
         }
 
         public async Task<IEnumerable<Product>> GetByCategoryAsync(string category)
         {
             return await _context.Products
                 .Where(p => p.Category == category)
+                .Select(p => new Product
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Price = p.Price,
+                    AvailableQuantity = p.AvailableQuantity,
+                    Category = p.Category,
+                    ImageUrl = p.ImageUrl
+                })
                 .ToListAsync();
         }
 
         public async Task<Product?> GetByIdAsync(string id)
         {
-            return await _context.Products.FindAsync(id);
+            return await _context.Products.Select(p => new Product
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                Price = p.Price,
+                AvailableQuantity = p.AvailableQuantity,
+                Category = p.Category,
+                ImageUrl = p.ImageUrl
+            }).FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<string> CreateAsync(Product product)

@@ -21,7 +21,7 @@ namespace Mafia.Infrastructre
             _userManager = userManager;
         }
 
-        public string GenerateJwtToken(User user, IList<string> roles)
+        public string GenerateJwtToken(User user, IEnumerable<string> roles)
         {
             var claims = new List<Claim>
             {

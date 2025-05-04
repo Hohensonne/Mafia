@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mafia.Infrastructre")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8d7eff7449269a35412ca7bb74b9c53daf55cdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73cbb90823ac1e072e4d33587ee6822acc169939")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mafia.Infrastructre")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mafia.Infrastructre")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
